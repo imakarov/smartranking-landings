@@ -459,25 +459,27 @@
 </section>
 
 <script>
-// Animate summary stats and cards on scroll
-const summaryObserver = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      const el = entry.target;
-      const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('summary-stat') || c.classList.contains('summary-card'));
-      const idx = siblings.indexOf(el);
-      setTimeout(() => {
-        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        el.style.opacity = '1';
-        el.style.transform = 'translateY(0)';
-      }, idx * 100);
-      summaryObserver.unobserve(el);
-    }
+document.addEventListener('DOMContentLoaded', () => {
+  const summaryObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const siblings = Array.from(el.parentElement.children).filter(c => c.classList.contains('summary-stat') || c.classList.contains('summary-card'));
+        const idx = siblings.indexOf(el);
+        setTimeout(() => {
+          el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+          el.style.opacity = '1';
+          el.style.transform = 'translateY(0)';
+        }, Math.max(idx, 0) * 100);
+        summaryObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.summary-stat, .summary-card').forEach((el) => {
+    el.style.transform = 'translateY(24px)';
+    summaryObserver.observe(el);
   });
-}, { threshold: 0.15 });
-document.querySelectorAll('.summary-stat, .summary-card').forEach(el => {
-  el.style.transform = 'translateY(24px)';
-  summaryObserver.observe(el);
 });
 </script>
 
