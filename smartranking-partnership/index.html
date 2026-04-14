@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#d5e3fc",
+                    "surface-tint": "#0c56d0",
+                    "tertiary-container": "#006847",
+                    "secondary": "#515f74",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary-container": "#75e8b5",
+                    "background": "#faf8ff",
+                    "on-surface-variant": "#434654",
+                    "inverse-on-surface": "#eef0ff",
+                    "primary-fixed-dim": "#b2c5ff",
+                    "surface-container-high": "#e2e7ff",
+                    "surface-container": "#eaedff",
+                    "primary-container": "#0052cc",
+                    "surface-dim": "#d2d9f4",
+                    "surface-container-highest": "#dae2fd",
+                    "inverse-primary": "#b2c5ff",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#003d9b",
+                    "inverse-surface": "#283044",
+                    "outline": "#737685",
+                    "outline-variant": "#c3c6d6",
+                    "error": "#ba1a1a",
+                    "tertiary": "#004e34",
+                    "surface-bright": "#faf8ff",
+                    "surface-variant": "#dae2fd",
+                    "on-background": "#131b2e",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f2f3ff",
+                    "primary-fixed": "#dae2ff",
+                    "on-secondary-container": "#57657a",
+                    "on-primary-container": "#c4d2ff",
+                    "on-secondary": "#ffffff",
+                    "surface": "#faf8ff",
+                    "on-surface": "#131b2e",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+   ym(84884446, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/84884446" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen max-w-[960px] mx-auto">
+<!-- Header -->
+<header class="w-full top-0 sticky bg-white dark:bg-[#131B2E] border-none z-50">
+<nav class="flex justify-between items-center px-4 md:px-8 py-2 min-h-[64px] gap-2">
+<div class="flex items-center shrink-0">
+<img alt="Smart Ranking Logo" class="h-7 md:h-8 w-auto object-contain" src="logo.svg"/>
+</div>
+<div class="flex-1 text-center">
+<span class="text-[10px] md:text-sm font-label font-bold text-primary tracking-[0.1em] md:tracking-[0.15em] uppercase">ПАРТНЕРСКОЕ ПРЕДЛОЖЕНИЕ</span>
+</div>
+<div class="flex justify-end shrink-0">
+<span class="font-headline font-semibold text-on-background text-sm md:text-lg whitespace-nowrap">Smart Ranking</span>
+</div>
+</nav>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative overflow-hidden pt-12 md:pt-16 pb-12 md:pb-16 px-4 md:px-8">
+<div class="absolute inset-0 -z-10 bg-[radial-gradient(70%_60%_at_50%_35%,#E2E7FF_0%,#FAF8FF_100%)]"></div>
+<div class="absolute top-8 right-8 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10"></div>
+<div class="absolute bottom-8 left-8 w-48 h-48 bg-tertiary/5 rounded-full blur-3xl -z-10"></div>
+<div class="flex flex-col items-center text-center">
+<div class="inline-flex w-fit items-center gap-2 px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider mb-6">
+<span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">star</span>
+                    Партнерство 2026
+                </div>
+<h1 class="text-5xl md:text-6xl lg:text-7xl font-headline font-extrabold text-on-background tracking-tighter leading-[1.05] mb-6">
+                    Партнер<br/><span class="text-primary">Smart Ranking</span>
+</h1>
+<p class="text-lg md:text-xl text-on-surface-variant max-w-lg leading-relaxed">
+                    Аналитика, PR-инструменты и экспертная платформа для компаний, формирующих технологический ландшафт России.
+                </p>
+</div>
+</section>
+
+<!-- What Company Gets -->
+<div class="px-4 md:px-12 py-12">
+<section class="mb-14 flex flex-col md:flex-row items-end justify-between gap-12">
+<div class="max-w-2xl">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-4 block font-semibold">Преимущества партнерства</span>
+<h1 class="font-headline text-3xl md:text-5xl font-extrabold tracking-tighter text-on-background leading-[1.1]">
+                    Что получает <span class="text-primary">компания</span>
+</h1>
+</div>
+<div class="hidden md:block w-32 h-[1px] bg-outline-variant opacity-30 mb-6"></div>
+</section>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Аналитика -->
+<div class="group">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl h-full transition-all duration-300 hover:bg-surface-bright border border-outline-variant/10 relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight">Аналитика</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">4 аналитических отчета по итогам каждого квартала (pdf, 60-80 стр.)</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Включение партнерских материалов в ежеквартальные отчеты (до 3 тыс знаков)</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Ежеквартальные аналитические отчеты по всем исследуемым рынкам</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- PR и контент -->
+<div class="group">
+<div class="bg-surface-container-low p-8 md:p-10 rounded-xl h-full transition-all duration-300 hover:bg-surface-bright border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-md bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">campaign</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight">PR и продвижение</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Упоминание в качестве партнера во всех материалах (рассылка, анкеты, отчет, релиз)</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Размещение логотипа на сайте, анкете и в других материалах</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Включение комментариев в публикации на SmartRanking.ru</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Мероприятия -->
+<div class="group">
+<div class="bg-surface-container-low p-8 md:p-10 rounded-xl h-full transition-all duration-300 hover:bg-surface-bright border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">groups</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight">Мероприятия</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Подготовка интервью на платформе Smart Ranking, анонс в соцсетях</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Интеграция спикера в ежеквартальные онлайн-митапы с презентацией рейтингов</p>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Рассылка материалов по базе и публикация постов в тг-канале (не менее 4 за год)</p>
+</li>
+</ul>
+</div>
+</div>
+<!-- Исследования -->
+<div class="group">
+<div class="bg-surface-container-lowest p-8 md:p-10 rounded-xl h-full transition-all duration-300 hover:bg-surface-bright border border-outline-variant/10">
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 rounded-md bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">science</span>
+</div>
+<h3 class="font-headline text-xl font-bold tracking-tight">Исследования</h3>
+</div>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary mt-0.5 text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<p class="text-on-surface-variant text-sm">Исследование / рейтинг одного IT-рынка под заказ с публикацией итогов в СМИ</p>
+</li>
+</ul>
+<p class="text-xs text-outline mt-4 italic">Доступно в Пакете 1</p>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Pricing Section -->
+<div class="px-4 md:px-12 py-12 border-t border-outline-variant/10">
+<section class="mb-12 flex flex-col md:flex-row items-end justify-between gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-sm uppercase tracking-widest text-primary mb-3 block font-semibold">Форматы участия</span>
+<h1 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tighter text-on-background leading-[1.1]">
+                    Выберите <span class="text-primary">пакет</span>
+</h1>
+</div>
+<div class="hidden md:block w-32 h-[1px] bg-outline-variant opacity-30 mb-6"></div>
+</section>
+
+<!-- Desktop Table -->
+<div class="hidden md:block overflow-x-auto mb-20">
+<table class="w-full border-collapse bg-white rounded-xl overflow-hidden shadow-sm border border-outline-variant/20">
+<thead>
+<tr class="bg-surface-container-low text-left">
+<th class="px-5 py-4 text-sm font-headline font-extrabold text-on-surface">Пакеты партнера Smart Ranking</th>
+<th class="px-3 py-4 text-center w-36">
+<span class="block font-label text-[10px] uppercase tracking-widest text-outline mb-1">Максимальный</span>
+<span class="block font-headline text-lg font-extrabold text-primary">Пакет 1</span>
+</th>
+<th class="px-3 py-4 text-center w-36 border-l border-outline-variant/10">
+<span class="block font-label text-[10px] uppercase tracking-widest text-outline mb-1">Стандартный</span>
+<span class="block font-headline text-lg font-extrabold text-on-surface">Пакет 2</span>
+</th>
+<th class="px-3 py-4 text-center w-36 border-l border-outline-variant/10">
+<span class="block font-label text-[10px] uppercase tracking-widest text-outline mb-1">Базовый</span>
+<span class="block font-headline text-lg font-extrabold text-on-surface">Пакет 3</span>
+</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/10">
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Упоминание в качестве партнера во всех материалах (рассылка, анкеты, отчет, релиз и т.д.)</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Размещение логотипа на сайте, анкете и в других материалах</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Четыре аналитических отчета по итогам каждого квартала (pdf, 60-80 стр.)</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Включение партнерских материалов в ежеквартальные отчеты (до 3 тыс знаков)</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Подготовка интервью на платформе Smart Ranking, анонс в соцсетях</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Рассылка материалов по базе и публикация постов в тг-канале: анонсы мероприятий, вакансии, новости компании (не менее 4 за год)</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Включение релевантных комментариев в публикации на SmartRanking.ru</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Интеграция спикера в ежеквартальные онлайн-митапы с презентацией рейтингов</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Ежеквартальные аналитические отчеты по всем исследуемым рынкам</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr>
+<td class="px-5 py-3 text-sm text-on-surface-variant">Исследование / рейтинг одного IT-рынка под заказ с публикацией итогов в СМИ</td>
+<td class="px-3 py-3 text-center"><span class="material-symbols-outlined text-tertiary text-xl" style="font-variation-settings: 'FILL' 1;">check_circle</span></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+<td class="px-3 py-3 text-center border-l border-outline-variant/10"></td>
+</tr>
+<tr class="bg-surface-container-low/50">
+<td class="px-5 py-4">
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm">Годовой взнос <span class="font-normal text-xs text-on-surface-variant opacity-70">(включает 4 рейтинга по итогам каждого квартала)</span></span>
+</div>
+</td>
+<td class="px-3 py-4 text-center bg-primary-container/10">
+<div class="flex flex-col items-center">
+<span class="font-headline text-lg font-extrabold text-primary mb-2">960 000 ₽</span>
+<a href="https://t.me/elenasmartranking" target="_blank" class="block w-full py-2 bg-primary text-on-primary text-xs font-bold rounded-lg hover:bg-primary/90 transition-all text-center">Выбрать</a>
+</div>
+</td>
+<td class="px-3 py-4 text-center border-l border-outline-variant/10">
+<div class="flex flex-col items-center">
+<span class="font-headline text-lg font-extrabold text-on-surface mb-2">640 000 ₽</span>
+<a href="https://t.me/elenasmartranking" target="_blank" class="block w-full py-2 bg-surface-container-high text-on-surface text-xs font-bold rounded-lg hover:bg-outline-variant transition-all text-center">Выбрать</a>
+</div>
+</td>
+<td class="px-3 py-4 text-center border-l border-outline-variant/10">
+<div class="flex flex-col items-center">
+<span class="font-headline text-lg font-extrabold text-on-surface mb-2">520 000 ₽</span>
+<a href="https://t.me/elenasmartranking" target="_blank" class="block w-full py-2 bg-surface-container-high text-on-surface text-xs font-bold rounded-lg hover:bg-outline-variant transition-all text-center">Выбрать</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<!-- Mobile Cards -->
+<div class="md:hidden space-y-6 mb-20">
+<div class="bg-white rounded-xl p-6 border border-outline-variant/20 shadow-sm">
+<h4 class="font-headline font-bold text-base mb-3">Все пакеты включают:</h4>
+<ul class="space-y-2 text-sm text-on-surface-variant">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-lg shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>Упоминание как партнера во всех материалах</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-tertiary text-lg shrink-0" style="font-variation-settings: 'FILL' 1;">check_circle</span>4 аналитических отчета по итогам квартала</li>
+</ul>
+</div>
+<!-- Pack 1 -->
+<div class="bg-white rounded-xl border-2 border-primary shadow-lg overflow-hidden">
+<div class="bg-primary px-6 py-3">
+<span class="font-label text-xs uppercase tracking-widest text-on-primary/70">Максимальный</span>
+<div class="font-headline text-2xl font-extrabold text-on-primary">Пакет 1</div>
+</div>
+<div class="p-6">
+<p class="font-headline text-sm font-semibold mb-2 text-primary">Все 10 опций:</p>
+<ul class="space-y-2 text-sm text-on-surface-variant mb-6">
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg shrink-0" style="font-variation-settings: 'FILL' 1;">add_circle</span>Логотип, интервью, рассылки</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg shrink-0" style="font-variation-settings: 'FILL' 1;">add_circle</span>Комментарии, митапы, отчеты</li>
+<li class="flex items-start gap-2"><span class="material-symbols-outlined text-primary text-lg shrink-0" style="font-variation-settings: 'FILL' 1;">add_circle</span>Исследование рынка под заказ</li>
+</ul>
+<div class="text-center">
+<span class="font-headline text-3xl font-extrabold text-primary">960 000 ₽</span>
+<p class="text-xs text-outline mt-1">Годовой взнос</p>
+</div>
+<a href="https://t.me/elenasmartranking" target="_blank" class="mt-4 block w-full py-4 bg-primary text-on-primary text-base font-bold rounded-lg hover:bg-primary/90 transition-all text-center">Выбрать Пакет 1</a>
+</div>
+</div>
+<!-- Pack 2 -->
+<div class="bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+<div class="bg-surface-container-low px-6 py-3">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Стандартный</span>
+<div class="font-headline text-2xl font-extrabold text-on-surface">Пакет 2</div>
+</div>
+<div class="p-6">
+<p class="text-sm text-on-surface-variant mb-6">6 ключевых опций партнерства</p>
+<div class="text-center">
+<span class="font-headline text-3xl font-extrabold text-on-surface">640 000 ₽</span>
+<p class="text-xs text-outline mt-1">Годовой взнос</p>
+</div>
+<a href="https://t.me/elenasmartranking" target="_blank" class="mt-4 block w-full py-4 bg-surface-container-high text-on-surface text-base font-bold rounded-lg hover:bg-outline-variant transition-all text-center">Выбрать Пакет 2</a>
+</div>
+</div>
+<!-- Pack 3 -->
+<div class="bg-white rounded-xl border border-outline-variant/20 shadow-sm overflow-hidden">
+<div class="bg-surface-container-low px-6 py-3">
+<span class="font-label text-xs uppercase tracking-widest text-outline">Базовый</span>
+<div class="font-headline text-2xl font-extrabold text-on-surface">Пакет 3</div>
+</div>
+<div class="p-6">
+<p class="text-sm text-on-surface-variant mb-6">Базовые возможности партнерства</p>
+<div class="text-center">
+<span class="font-headline text-3xl font-extrabold text-on-surface">520 000 ₽</span>
+<p class="text-xs text-outline mt-1">Годовой взнос</p>
+</div>
+<a href="https://t.me/elenasmartranking" target="_blank" class="mt-4 block w-full py-4 bg-surface-container-high text-on-surface text-base font-bold rounded-lg hover:bg-outline-variant transition-all text-center">Выбрать Пакет 3</a>
+</div>
+</div>
+</div>
+
+<!-- Clients Section -->
+<section class="mb-10">
+<div class="text-center mb-8">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-outline mb-3">Наши клиенты — лидеры индустрии</p>
+<div class="h-px w-24 bg-outline-variant mx-auto"></div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-6 md:gap-x-12 md:gap-y-8 items-center bg-white border border-outline-variant/30 p-6 md:p-10 rounded-2xl">
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="VK Tech" class="max-h-full max-w-full object-contain" src="../logos/vk-tech.png"/></div>
+<div class="flex items-center justify-center h-16 grayscale hover:grayscale-0 transition-all duration-300">
+<img alt="Avito Услуги" class="max-h-full max-w-full object-contain" src="../logos/avito.jpg"/></div>
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="Kinescope" class="max-h-full max-w-full object-contain" src="../logos/kinescope.png"/></div>
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="Ростелеком" class="max-h-full max-w-full object-contain" src="../logos/rostelecom.png"/></div>
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="Skillbox" class="max-h-full max-w-full object-contain" src="../logos/skillbox.png"/></div>
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="Яндекс Практикум" class="max-h-full max-w-full object-contain" src="../logos/yandex-practicum.webp"/></div>
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="Solar Staff" class="max-h-full max-w-full object-contain" src="../logos/solar-staff.png"/></div>
+<div class="flex items-center justify-center h-10 grayscale hover:grayscale-0 transition-all duration-300"><img alt="Актион" class="max-h-full max-w-full object-contain" src="../logos/action.png"/></div>
+</div>
+</section>
+</div>
+</main>
+
+<!-- CTA: Become Partner -->
+<section class="py-8 px-4 md:px-8">
+<div class="max-w-[800px] mx-auto text-center">
+<a href="https://t.me/elenasmartranking" target="_blank" class="inline-block w-full py-5 px-12 bg-primary text-on-primary text-xl font-headline font-bold rounded-xl hover:bg-primary-container transition-all shadow-lg shadow-primary/20 hover:shadow-xl hover:shadow-primary/30">
+Стать партнером Smart Ranking
+</a>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full border-t-0 bg-[#FAF8FF] dark:bg-[#131B2E]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full max-w-[1440px] mx-auto">
+<div class="font-['Manrope'] font-bold text-slate-900 dark:text-slate-100 mb-4 md:mb-0">
+            Smart Ranking
+        </div>
+<div class="font-['Inter'] text-sm tracking-wide uppercase text-[#004E34] opacity-80 mb-6 md:mb-0">
+            &copy; 2026 Smart Ranking | Партнерская программа
+        </div>
+<div class="flex gap-8"></div>
+</div>
+</footer>
+</body></html>

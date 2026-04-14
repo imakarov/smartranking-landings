@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>BigTech 100 — Коммерческое предложение</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    color: #131b2e;
+    background: #faf8ff;
+    width: 210mm;
+    margin: 0 auto;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* ===== PAGE SYSTEM ===== */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    max-height: 297mm;
+    overflow: hidden;
+    padding: 12mm 14mm;
+    position: relative;
+    page-break-after: always;
+    background: #faf8ff;
+  }
+  .page:last-child { page-break-after: avoid; }
+
+  /* ===== TYPOGRAPHY ===== */
+  .font-headline { font-family: 'Manrope', sans-serif; }
+  .font-label { font-family: 'Inter', sans-serif; }
+
+  h1 { font-family: 'Manrope', sans-serif; font-weight: 800; letter-spacing: -0.03em; }
+  h2 { font-family: 'Manrope', sans-serif; font-weight: 700; letter-spacing: -0.02em; }
+  h3 { font-family: 'Manrope', sans-serif; font-weight: 700; }
+  h4 { font-family: 'Manrope', sans-serif; font-weight: 700; }
+
+  /* ===== COLORS ===== */
+  .text-primary { color: #003d9b; }
+  .text-tertiary { color: #004e34; }
+  .text-muted { color: #434654; }
+  .text-light { color: #737685; }
+  .bg-primary { background: #003d9b; }
+  .bg-primary-container { background: #0052cc; }
+  .bg-surface-low { background: #f2f3ff; }
+  .bg-surface-lowest { background: #ffffff; }
+
+  /* ===== HEADER ===== */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8mm;
+    border-bottom: 1px solid rgba(195,198,214,0.3);
+    margin-bottom: 8mm;
+  }
+  .header img { height: 28px; }
+  .header .badge {
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #003d9b;
+  }
+  .header .title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+  }
+
+  /* ===== PAGE 1: Hero + About ===== */
+  .hero { margin-bottom: 8mm; }
+  .hero h1 { font-size: 32px; line-height: 1.1; margin-bottom: 4mm; }
+  .hero h1 span { color: #003d9b; }
+  .hero p { font-size: 12px; color: #434654; line-height: 1.5; max-width: 85%; }
+  .hero-badge {
+    display: inline-block;
+    background: #d5e3fc;
+    color: #131b2e;
+    font-size: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 4mm;
+  }
+
+  .about-section { margin-top: 6mm; }
+  .about-section .section-label {
+    font-size: 8px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: #003d9b;
+    margin-bottom: 2mm;
+  }
+  .about-section h2 { font-size: 20px; margin-bottom: 3mm; }
+  .about-section > p { font-size: 11px; color: #434654; line-height: 1.5; margin-bottom: 5mm; }
+
+  .about-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4mm;
+  }
+  .about-card {
+    background: white;
+    border-radius: 6px;
+    padding: 5mm;
+    border: 1px solid rgba(195,198,214,0.15);
+  }
+  .about-card .icon {
+    color: #003d9b;
+    font-size: 20px;
+    margin-bottom: 2mm;
+  }
+  .about-card h4 { font-size: 11px; margin-bottom: 2mm; }
+  .about-card p { font-size: 9px; color: #434654; line-height: 1.4; }
+
+  /* ===== PAGE 2: Benefits + Ecosystem ===== */
+  .benefits-section .section-label {
+    font-size: 8px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: #003d9b; margin-bottom: 2mm; text-align: center;
+  }
+  .benefits-section h2 { font-size: 20px; text-align: center; margin-bottom: 5mm; }
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4mm;
+    margin-bottom: 8mm;
+  }
+  .benefit-card {
+    background: white;
+    padding: 5mm;
+    border-radius: 6px;
+    border: 1px solid rgba(195,198,214,0.1);
+  }
+  .benefit-card .icon { font-size: 22px; margin-bottom: 2mm; }
+  .benefit-card h4 { font-size: 12px; margin-bottom: 2mm; }
+  .benefit-card p { font-size: 9px; color: #434654; line-height: 1.4; }
+
+  .ecosystem-section .section-label {
+    font-size: 8px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: #003d9b; margin-bottom: 2mm;
+  }
+  .ecosystem-section h2 { font-size: 20px; margin-bottom: 5mm; }
+  .ecosystem-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4mm;
+  }
+  .eco-card {
+    padding: 4mm;
+    border-radius: 6px;
+    border: 1px solid rgba(195,198,214,0.15);
+  }
+  .eco-card.bg-white { background: white; }
+  .eco-card.bg-light { background: #f2f3ff; }
+  .eco-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: 2mm;
+    margin-bottom: 3mm;
+  }
+  .eco-card .card-header .icon-box {
+    width: 24px; height: 24px; border-radius: 4px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+  }
+  .eco-card .card-header h4 { font-size: 12px; }
+  .eco-card .item { margin-bottom: 2mm; }
+  .eco-card .item-title { font-family: 'Manrope', sans-serif; font-weight: 600; font-size: 10px; }
+  .eco-card .item-desc { font-size: 8.5px; color: #434654; line-height: 1.3; }
+
+  /* ===== PAGE 3: Methodology + Pricing ===== */
+  .methodology-section {
+    display: flex;
+    gap: 8mm;
+    align-items: center;
+    margin-bottom: 8mm;
+    padding-bottom: 6mm;
+    border-bottom: 1px solid rgba(195,198,214,0.2);
+  }
+  .methodology-section .text { flex: 1; }
+  .methodology-section h2 { font-size: 18px; margin-bottom: 3mm; }
+  .methodology-section p { font-size: 10px; color: #434654; line-height: 1.5; margin-bottom: 4mm; }
+  .methodology-stats { display: flex; gap: 8mm; }
+  .methodology-stats .stat-value { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 24px; }
+  .methodology-stats .stat-label { font-size: 7px; text-transform: uppercase; letter-spacing: 0.15em; color: #737685; margin-top: 1mm; }
+  .methodology-section .chart {
+    flex: 0 0 60mm;
+    height: 40mm;
+    background: #e2e7ff;
+    border-radius: 6px;
+    display: flex;
+    align-items: flex-end;
+    padding: 4mm;
+    gap: 3mm;
+  }
+  .methodology-section .chart .bar {
+    flex: 1;
+    border-radius: 2px 2px 0 0;
+  }
+
+  .pricing-section .section-label {
+    font-size: 8px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: 0.2em; color: #003d9b; margin-bottom: 2mm;
+  }
+  .pricing-section h2 { font-size: 20px; margin-bottom: 5mm; }
+
+  .pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 6px;
+    overflow: hidden;
+    font-size: 9px;
+    border: 1px solid rgba(195,198,214,0.2);
+  }
+  .pricing-table thead tr { background: #f2f3ff; }
+  .pricing-table th {
+    padding: 4mm 3mm;
+    text-align: left;
+    font-size: 9px;
+  }
+  .pricing-table th:first-child { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 11px; }
+  .pricing-table th.pkg {
+    text-align: center;
+    width: 55mm;
+  }
+  .pricing-table th.pkg .label { font-size: 7px; text-transform: uppercase; letter-spacing: 0.15em; color: #737685; display: block; margin-bottom: 1mm; }
+  .pricing-table th.pkg .name { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 14px; }
+  .pricing-table th.pkg .name.primary { color: #003d9b; }
+  .pricing-table td { padding: 3mm; vertical-align: top; border-top: 1px solid rgba(195,198,214,0.1); }
+  .pricing-table td:nth-child(2), .pricing-table td:nth-child(3) { text-align: center; width: 55mm; vertical-align: middle; }
+  .pricing-table td:nth-child(3) { border-left: 1px solid rgba(195,198,214,0.1); }
+  .pricing-table th:nth-child(3) { border-left: 1px solid rgba(195,198,214,0.1); }
+  .pricing-table td h4 { font-size: 10px; margin-bottom: 1.5mm; }
+  .pricing-table td ul { padding-left: 0; list-style: none; }
+  .pricing-table td li { font-size: 8px; color: #434654; line-height: 1.4; margin-bottom: 1mm; }
+  .pricing-table td .note { font-size: 8px; color: #434654; font-style: italic; }
+  .pricing-table .check { color: #004e34; font-size: 18px; }
+  .pricing-table .uncheck { color: rgba(195,198,214,0.5); font-size: 18px; }
+  .pricing-table .price-row { background: rgba(242,243,255,0.5); }
+  .pricing-table .price-value { font-family: 'Manrope', sans-serif; font-weight: 800; font-size: 15px; }
+  .pricing-table .price-value.primary { color: #003d9b; }
+  .pricing-table .price-note { font-size: 7px; color: #737685; margin-top: 1mm; }
+
+  /* ===== PAGE 4: Expertise + Clients + Footer ===== */
+  .expertise-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 6mm;
+    margin-bottom: 6mm;
+  }
+  .expertise-grid .section-label {
+    font-size: 8px; font-weight: 600; text-transform: uppercase;
+    letter-spacing: 0.2em; color: #004e34; margin-bottom: 2mm;
+  }
+  .expertise-grid h2 { font-size: 26px; line-height: 1.1; }
+  .expertise-grid p { font-size: 10px; color: #434654; line-height: 1.5; }
+  .expertise-grid p + p { margin-top: 2mm; font-size: 9.5px; }
+
+  .quote-block {
+    background: white;
+    border-radius: 6px;
+    padding: 6mm;
+    display: flex;
+    gap: 5mm;
+    align-items: center;
+    margin-bottom: 6mm;
+    border: 1px solid rgba(195,198,214,0.15);
+  }
+  .quote-block .photo {
+    width: 35mm; height: 35mm;
+    border-radius: 4px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #eaedff;
+  }
+  .quote-block .photo img { width: 100%; height: 100%; object-fit: cover; }
+  .quote-block blockquote {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2mm;
+  }
+  .quote-block .author { font-weight: 700; font-size: 10px; }
+  .quote-block .role { font-size: 8px; color: #003d9b; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; }
+
+  .blue-box {
+    background: #003d9b;
+    color: white;
+    border-radius: 6px;
+    padding: 6mm 8mm;
+    margin-bottom: 6mm;
+    position: relative;
+    overflow: hidden;
+  }
+  .blue-box p { font-size: 10px; line-height: 1.5; opacity: 0.95; }
+
+  .clients-section { margin-bottom: 5mm; }
+  .clients-section .section-label {
+    font-size: 7px; text-transform: uppercase; letter-spacing: 0.2em;
+    color: #737685; text-align: center; margin-bottom: 3mm;
+  }
+  .clients-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3mm;
+    background: white;
+    border: 1px solid rgba(195,198,214,0.2);
+    border-radius: 6px;
+    padding: 4mm 5mm;
+  }
+  .clients-grid .client {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2mm;
+  }
+  .clients-grid .client img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.7;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 3mm;
+    border-top: 1px solid rgba(195,198,214,0.2);
+    position: absolute;
+    bottom: 10mm;
+    left: 14mm;
+    right: 14mm;
+  }
+  .footer .brand { font-family: 'Manrope', sans-serif; font-weight: 700; font-size: 10px; }
+  .footer .copy { font-size: 7px; text-transform: uppercase; letter-spacing: 0.1em; color: #737685; }
+</style>
+</head>
+<body>
+
+<!-- ==================== PAGE 1: Hero + About ==================== -->
+<div class="page">
+  <div class="header">
+    <img alt="Smart Ranking Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uij6xkvMVUFn3blk4fn_3RtVnh9q1QGVZiJ87Buw44eLoStRx-9Rl39KTNTfMWBqMBVLPKY53FFCgqLd8T39RkhmofE31kDdVu7EhQePGkYtZ30xMuoSC84lqXnAPHn_HEXy5BTO01sciWnts4I0YmC36MWtITNecpl3zLUTx6q3GSxxAurcxJwER7V9XKL2Irwo-fIaY3yTOyRVFVd7G5C9whjNcHhMPWkFeuPfRagoJMX0A4S3IZoF6-4EerRkEgAkIfo5DfCwQ"/>
+    <span class="badge">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</span>
+    <span class="title font-headline">BigTech 100</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-badge">Партнёрский оффер 2026</div>
+    <h1>BigTech 100 — <span>эксклюзивный статус</span> для участников рейтинга.</h1>
+    <p>Рейтинг, глубокая аналитика и мощные PR-инструменты для технологических лидеров, определяющих будущее индустрии.</p>
+  </div>
+
+  <div class="about-section">
+    <div class="section-label">О проекте</div>
+    <h2>Что такое BigTech 100?</h2>
+    <p>Это главная витрина российского технологического бизнеса от Smart Ranking. Мы не просто считаем выручку — мы создаем контекст, в котором лидеры находят партнеров, а рынок — новые ориентиры.</p>
+
+    <div class="about-cards">
+      <div class="about-card">
+        <span class="material-symbols-outlined icon" data-icon="assessment">assessment</span>
+        <h4>Ежегодный аудит рынка</h4>
+        <p>Глубокое исследование ключевых игроков, основанное на верифицированных финансовых данных и рыночной экспертизе.</p>
+      </div>
+      <div class="about-card">
+        <span class="material-symbols-outlined icon" style="color:#004e34" data-icon="query_stats">query_stats</span>
+        <h4>Экспертиза Smart Ranking</h4>
+        <p>Методология, признанная крупнейшими IT-холдингами и медиа-ресурсами страны как золотой стандарт аналитики.</p>
+      </div>
+      <div class="about-card">
+        <span class="material-symbols-outlined icon" data-icon="public">public</span>
+        <h4>Аналитический контекст</h4>
+        <p>Мы вписываем достижения вашей компании в общую картину индустрии, подчеркивая уникальность вашего пути.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 2: Benefits + Ecosystem ==================== -->
+<div class="page">
+  <div class="header">
+    <img alt="Smart Ranking Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uij6xkvMVUFn3blk4fn_3RtVnh9q1QGVZiJ87Buw44eLoStRx-9Rl39KTNTfMWBqMBVLPKY53FFCgqLd8T39RkhmofE31kDdVu7EhQePGkYtZ30xMuoSC84lqXnAPHn_HEXy5BTO01sciWnts4I0YmC36MWtITNecpl3zLUTx6q3GSxxAurcxJwER7V9XKL2Irwo-fIaY3yTOyRVFVd7G5C9whjNcHhMPWkFeuPfRagoJMX0A4S3IZoF6-4EerRkEgAkIfo5DfCwQ"/>
+    <span class="badge">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</span>
+    <span class="title font-headline">BigTech 100</span>
+  </div>
+
+  <div class="benefits-section">
+    <div class="section-label">Преимущества</div>
+    <h2>Почему важно быть в списке?</h2>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <span class="material-symbols-outlined icon text-primary" data-icon="leaderboard">leaderboard</span>
+        <h4>Позиция на рынке</h4>
+        <p>Официальное подтверждение вашего статуса лидера среди 100 сильнейших игроков BigTech. Фундамент для доверия инвесторов и партнеров.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="material-symbols-outlined icon text-tertiary" data-icon="ads_click">ads_click</span>
+        <h4>Позиционирование</h4>
+        <p>Четкий месседж рынку о масштабах вашего бизнеса. Мы помогаем транслировать ваши ценности через призму объективных данных.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="material-symbols-outlined icon text-primary" data-icon="campaign">campaign</span>
+        <h4>PR-актив</h4>
+        <p>Готовый набор инструментов для коммуникаций: бейджи рейтинга, цитирование в СМИ и участие в итоговом аналитическом отчете года.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="ecosystem-section">
+    <div class="section-label">Продуктовая экосистема</div>
+    <h2>Что получает компания</h2>
+    <div class="ecosystem-grid">
+      <div class="eco-card bg-white">
+        <div class="card-header">
+          <div class="icon-box" style="background:rgba(0,61,155,0.1); color:#003d9b;">
+            <span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+          </div>
+          <h4>Аналитика и данные</h4>
+        </div>
+        <div class="item"><span class="item-title">Рейтинг</span> <span class="item-desc">— позиция в рэнкинге и верификация рыночной доли</span></div>
+        <div class="item"><span class="item-title">Тренд-репорт</span> <span class="item-desc">— эксклюзивный доступ к анализу отраслевых трендов</span></div>
+        <div class="item"><span class="item-title">Коммуникации</span> <span class="item-desc">— стратегические рекомендации по взаимодействию</span></div>
+      </div>
+      <div class="eco-card bg-light">
+        <div class="card-header">
+          <div class="icon-box" style="background:rgba(0,78,52,0.1); color:#004e34;">
+            <span class="material-symbols-outlined" data-icon="campaign">campaign</span>
+          </div>
+          <h4>PR и контент</h4>
+        </div>
+        <div class="item"><span class="item-title">Релиз</span> <span class="item-desc">— включение в федеральные пресс-релизы проекта</span></div>
+        <div class="item"><span class="item-title">Лендинг</span> <span class="item-desc">— персональная страница на платформе BigTech 100</span></div>
+        <div class="item"><span class="item-title">Интервью</span> <span class="item-desc">— серия интервью с топ-менеджментом на медиа-площадках</span></div>
+      </div>
+      <div class="eco-card bg-light">
+        <div class="card-header">
+          <div class="icon-box" style="background:rgba(0,61,155,0.1); color:#003d9b;">
+            <span class="material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
+          </div>
+          <h4>Позиционирование</h4>
+        </div>
+        <div class="item"><span class="item-title">Статус</span> <span class="item-desc">— официальный статус технологического лидера</span></div>
+        <div class="item"><span class="item-title">Доверие</span> <span class="item-desc">— повышение доверия через независимую верификацию</span></div>
+        <div class="item"><span class="item-title">HR-бренд</span> <span class="item-desc">— привлекательность для топ-менеджмента</span></div>
+      </div>
+      <div class="eco-card bg-white">
+        <div class="card-header">
+          <div class="icon-box" style="background:rgba(0,78,52,0.1); color:#004e34;">
+            <span class="material-symbols-outlined" data-icon="groups">groups</span>
+          </div>
+          <h4>Комьюнити и нетворк</h4>
+        </div>
+        <div class="item"><span class="item-title">Презентация</span> <span class="item-desc">— участие в закрытой презентации для первых лиц</span></div>
+        <div class="item"><span class="item-title">Спикеры</span> <span class="item-desc">— приоритетное право на конференциях Smart Ranking</span></div>
+        <div class="item"><span class="item-title">Нетворкинг</span> <span class="item-desc">— доступ к экосистеме фаундеров и инвесторов</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== PAGE 3: Methodology + Pricing ==================== -->
+<div class="page">
+  <div class="header">
+    <img alt="Smart Ranking Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uij6xkvMVUFn3blk4fn_3RtVnh9q1QGVZiJ87Buw44eLoStRx-9Rl39KTNTfMWBqMBVLPKY53FFCgqLd8T39RkhmofE31kDdVu7EhQePGkYtZ30xMuoSC84lqXnAPHn_HEXy5BTO01sciWnts4I0YmC36MWtITNecpl3zLUTx6q3GSxxAurcxJwER7V9XKL2Irwo-fIaY3yTOyRVFVd7G5C9whjNcHhMPWkFeuPfRagoJMX0A4S3IZoF6-4EerRkEgAkIfo5DfCwQ"/>
+    <span class="badge">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</span>
+    <span class="title font-headline">BigTech 100</span>
+  </div>
+
+  <div class="methodology-section">
+    <div class="text">
+      <h2>Методология признания</h2>
+      <p>Наш подход объединяет количественные метрики роста с качественным анализом влияния на рынок, создавая наиболее полную картину технологического ландшафта.</p>
+      <div class="methodology-stats">
+        <div>
+          <div class="stat-value text-primary">100+</div>
+          <div class="stat-label">Критериев оценки</div>
+        </div>
+        <div>
+          <div class="stat-value text-tertiary">24/7</div>
+          <div class="stat-label">Мониторинг данных</div>
+        </div>
+      </div>
+    </div>
+    <div class="chart">
+      <div class="bar" style="background:rgba(0,61,155,0.2); height:30%;"></div>
+      <div class="bar" style="background:rgba(0,61,155,0.4); height:60%;"></div>
+      <div class="bar" style="background:rgba(0,61,155,0.6); height:45%;"></div>
+      <div class="bar" style="background:rgba(0,61,155,0.8); height:85%;"></div>
+      <div class="bar" style="background:#003d9b; height:70%;"></div>
+    </div>
+  </div>
+
+  <div class="pricing-section">
+    <div class="section-label">Форматы участия</div>
+    <h2>Выберите пакет роста</h2>
+
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Для участников рейтинга BigTech 100</th>
+          <th class="pkg">
+            <span class="label">Максимальный</span>
+            <span class="name primary">Пакет 1</span>
+          </th>
+          <th class="pkg">
+            <span class="label">Стандартный</span>
+            <span class="name">Пакет 2</span>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <h4>Расширенный профиль компании внутри рейтинга</h4>
+            <ul>
+              <li>— Согласованная карточка компании на сайте рейтинга</li>
+              <li>— Интеграция в контент и публикации проекта</li>
+              <li>— Аналитический отчет Trend-report</li>
+              <li>— Пост о компании в рубрике «Кейсы Bigtech» в канале Smart Ranking</li>
+            </ul>
+          </td>
+          <td><span class="material-symbols-outlined check" style="font-variation-settings:'FILL' 1;" data-icon="check_box">check_box</span></td>
+          <td><span class="material-symbols-outlined check" style="font-variation-settings:'FILL' 1;" data-icon="check_box">check_box</span></td>
+        </tr>
+        <tr>
+          <td>
+            <h4>Персональные статусы и номинации участника рейтинга*</h4>
+            <p class="note">(пример: «Входит в топ-20 bigtech компаний России», «№1 среди платежных сервисов»)</p>
+          </td>
+          <td><span class="material-symbols-outlined check" style="font-variation-settings:'FILL' 1;" data-icon="check_box">check_box</span></td>
+          <td><span class="material-symbols-outlined check" style="font-variation-settings:'FILL' 1;" data-icon="check_box">check_box</span></td>
+        </tr>
+        <tr>
+          <td>
+            <h4>Персональный аналитический отчет по позиции компании</h4>
+            <ul>
+              <li>— Место в рейтинге + динамика</li>
+              <li>— Сегментный анализ, сравнение с топ-5 конкурентов</li>
+              <li>— Ключевые тренды в сегменте</li>
+              <li>— Участие в онлайн-презентации, экспертная роль</li>
+              <li>— Публикация интервью со спикером</li>
+            </ul>
+          </td>
+          <td><span class="material-symbols-outlined check" style="font-variation-settings:'FILL' 1;" data-icon="check_box">check_box</span></td>
+          <td><span class="material-symbols-outlined uncheck" data-icon="check_box_outline_blank">check_box_outline_blank</span></td>
+        </tr>
+        <tr class="price-row">
+          <td>
+            <span style="font-family:'Manrope',sans-serif; font-weight:700; font-size:10px;">Стоимость</span>
+            <span style="font-size:8px; color:#737685;"> (НДС не облагается)</span>
+            <div class="price-note">*до трех номинаций — право использования на год, до 01.05.2027</div>
+          </td>
+          <td><span class="price-value primary">980 000 ₽</span></td>
+          <td><span class="price-value">740 000 ₽</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ==================== PAGE 4: Expertise + Clients + Footer ==================== -->
+<div class="page">
+  <div class="header">
+    <img alt="Smart Ranking Logo" src="https://lh3.googleusercontent.com/aida/ADBb0uij6xkvMVUFn3blk4fn_3RtVnh9q1QGVZiJ87Buw44eLoStRx-9Rl39KTNTfMWBqMBVLPKY53FFCgqLd8T39RkhmofE31kDdVu7EhQePGkYtZ30xMuoSC84lqXnAPHn_HEXy5BTO01sciWnts4I0YmC36MWtITNecpl3zLUTx6q3GSxxAurcxJwER7V9XKL2Irwo-fIaY3yTOyRVFVd7G5C9whjNcHhMPWkFeuPfRagoJMX0A4S3IZoF6-4EerRkEgAkIfo5DfCwQ"/>
+    <span class="badge">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</span>
+    <span class="title font-headline">BigTech 100</span>
+  </div>
+
+  <div class="expertise-grid">
+    <div>
+      <div class="section-label">Экспертиза</div>
+      <h2>Почему<br/>Smart Ranking.</h2>
+    </div>
+    <div>
+      <p>Мы объединяем глубокую аналитику рынка с медийными технологиями, создавая прозрачную систему оценки технологических лидеров. Smart Ranking — это единственный в России проект, сочетающий методологию Big Data с профессиональным журналистским подходом.</p>
+      <p>Наши исследования становятся основой для стратегических решений в BigTech, EdTech и Fintech секторах.</p>
+    </div>
+  </div>
+
+  <div class="quote-block">
+    <div class="photo">
+      <img alt="Дарья Рыжкова" src="https://lh3.googleusercontent.com/aida/ADBb0uiW6dUsZAXro2NgRITVwGxgpx60JhMjRnLqR6AuloblVCY0DHtIsl1MOsXNMA2zO3oyr0gRMS3jJwi6kyCZQE4RvSJ9K6tDt8cUn0Rfr4gE9QOVKdTUruYskQFwlp86ZKr5ZdO0_aQqymikglrpi6AsJPtNcnvikQfY7frQKcbQXxg27kuwQgKKBS1kDgs1q7HIBh4JrB2a5TxoBlE_rUvAUP67HEuVnuir3y19ObqPsN7wVik1LT0hW7I3lBADTsDP7xpLukrg"/>
+    </div>
+    <div>
+      <blockquote>«BigTech 100 — это навигатор по новой экономике. Мы создаем среду, где данные становятся репутационным капиталом для крупнейших игроков рынка».</blockquote>
+      <div class="author">Дарья Рыжкова</div>
+      <div class="role">Основатель Smart Ranking</div>
+    </div>
+  </div>
+
+  <div class="blue-box">
+    <p>Smart Ranking более 5 лет исследует технологические рынки России и СНГ. Агентство выпускает 12+ аналитических отчётов в год, развивает 4 ключевых отраслевых трека и делает флагманские рейтинги BigTech 100 и Smart 500. Среди компаний, которые уже работают со Smart Ranking, — VK Tech, Авито Услуги, Kinescope, Ростелеком, Skillbox, Яндекс Практикум, Solar Staff и Актион.</p>
+  </div>
+
+  <div class="clients-section">
+    <div class="section-label">Наши клиенты — лидеры индустрии</div>
+    <div class="clients-grid">
+      <div class="client"><img alt="VK Tech" src="https://lh3.googleusercontent.com/aida/ADBb0ugIgodAez2jj79FVCRR_Y_espc11F7unuJWQ22sbWFb6KglXSbk4AkYozLP_YYLdXGVK2Mdje4z0cS7dnzaUHaCnShOYPdHLpgTUhpJ29tPrlLLYfVi0oqMq4w5bduuII9RvBe02UJFhJTtCJ_72u6u2ywJwLJtRLxj0Vrk2UoWKXaHTYV2gZKX68YTNaC7yegzT2N8Sos8kYLWi_MJPXr8wugx_e-djyfIiaSOkhGxsRHywnQfeQP49M6OYWvnBbXD27SnHsyE"/></div>
+      <div class="client"><img alt="Avito Услуги" src="https://lh3.googleusercontent.com/aida/ADBb0uj7buFFdBLoY7rA0xT-C_NRzh2xtIPYwSi7ooQU_QMIDnJ3QfAO5WdWM1gcVUyuVI5qntkBEwOzWMT9k4h5uee7_BfFu-mtZl3o5vMrTA05emuLu60BsgwFurShmRAINFJ5TuPI-zvFLitxUUNboq6Aa_jPUjOIjL9U6FFoZ6bX3f4fdWyLkXwLDubppP4bkBvcKbdIxpKJlBZxOdeM5QldABhaBYm4wcs745JGBEvCaJTaz7GDli5w3nUY8uCZIqz_HPxtwBxTfw"/></div>
+      <div class="client"><img alt="Kinescope" src="https://lh3.googleusercontent.com/aida/ADBb0ujta2kr1TnqE-1Y31poB6ZKEDTTBAJtTFKN8pv-sSQOx0W2EAXQ883o50K_RwByqiN4cQSXzlqUJhMVuSONvvkVJD_WtjtbEboSeP8SdHpSd4aUxu4HUAIyj6Ba6QpctP6u_t1ViWFK5EyUuj1RfveH3kVAKberr7njdFrcmtl1xK656_sxziek7sgis6tESYZshdYDCAQPlhYlxQw3zbwEBp-56YCv3kH_f1C_kpwc8SAA7FGHfV8qkw73-KG5l6Dy61YXkboM"/></div>
+      <div class="client"><img alt="Ростелеком" src="https://lh3.googleusercontent.com/aida/ADBb0uhTx_WwvU5GqrZgUJe46A_MqAAvJjtEgEZrLCrwBW49ea9Hxp9Elb_4fqaPT484iSYq-CfIpYAHHtO6yT1lPeDjxRzXesYrLTTxFJygo2NVNHe_mPtrvDiBIBzt-nKz4FFyXN5aclqpmw93wwXepmBCthCkDh3DeDlPPjGUcMSQSK3lrVvSvjv5rP7DPvUtXTFSgFG_eETV8bIndabfUIzgTsOIu8TX2WNnRSu07iWxHVepV4I4UWmJehF-oM4xT-MWFMOGxSPUvw"/></div>
+      <div class="client"><img alt="Skillbox" src="https://lh3.googleusercontent.com/aida/ADBb0ui2RMd44AUY3A2JlY4dUcj9H-ELtXtu94XGbl9r3rBFs70DF61iZu5cqG0JaMEDyRO688rE5jJL2DS5uZViW87sH8nMTFyQBk2026D9AEZ4G3VWcPYPyCpe-sGF_TSUctSxh1ZFl8nkgP5PE0SyI0jyagtk7kSpeWn18KWXqNt8aVKRV8MeB_98Guj-ysEwEjkmnAbzk0guvVegFKD1a3f-KyQ6ki8PXySjUttXqaajma8VXo-g3jdmoY9JKb--AiAUr3sH5efJRw"/></div>
+      <div class="client"><img alt="Yandex Practicum" src="https://lh3.googleusercontent.com/aida/ADBb0uiSSVPfD4WyginSPSJ_YJR7Kp8coRMPg7g6o08_wYIzJOxGLlLlzPZ2In9r05KCyqY9gIP4e5vKdMpI9rbBBc1TkvF0f5SJFQKoG66tWXl-GWvSnkEgQeIq0mCEHHiQDGmUpDNrbDmY45ONNn0hbGg2kdJf7P1nS_TQvmVoAPpbkzEcm2NJw4xkHwAKZQIsuUorln0xais_bXA5o2LEsKyKN-NZrzcRMzIC0V4x50g5hHf3jvP2b3PFxEftH5jsofHD5U-VUACGTw"/></div>
+      <div class="client"><img alt="Solar Staff" src="https://lh3.googleusercontent.com/aida/ADBb0ujn_NZQn9F2Gb7_egE3HgU50JI9HuNjOpfMitpu5-SWEqC0akAMDp_gGHdCCfGe17owj-CrJVFD_BDGhQJq3H_P-3pbs4xEsfRKsnRtDL2dfaCMGCyz403YOY7KceYYmTC_UXYu03IB64U6am7cCujcj-XUJMyYm8AmWFapBpENarP2e6rwPCLbgSW_Lv8Z0VgueaCp-d3sP7LLODimWRwt26UIVkem45KseFEEA2C34ef5H3fTiJHy7fdiKamkXvgbOyzgm7AaTg"/></div>
+      <div class="client"><img alt="Актион" src="https://lh3.googleusercontent.com/aida/ADBb0ujsgbM-24bIXJGUThEz7MlyIbqT3f57KeEJWBmEU2Dzjp5vM2JJ5vMYqS2sKjbVTixa8EMUaxLg4bMqWEtybX29iAeq8WmBRPUkCF3puJ6I-5Pai_Uj4T-2ThcXG7N20oarCNGNx-vgazmISMv9pbm_8FhZrwvUnt_T11DjCZltLBwO8TEIuoeKhVp_uyHUdkvBDYRroSg0esYTydUzhgOPLbTnQamhmoI6uRfJrqZN2NvlGnQCH_2MUc8MQH-fv39tYv50mrRcEw"/></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <span class="brand">Smart Ranking</span>
+    <span class="copy">© 2024 Smart Ranking | BigTech 100 Project</span>
+  </div>
+</div>
+
+</body>
+</html>
