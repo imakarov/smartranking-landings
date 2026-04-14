@@ -96,6 +96,44 @@
             border-left: 3px solid #003d9b;
             padding-left: 12px;
         }
+        .summary-kicker {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 2rem;
+        }
+        .summary-kicker span {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.45rem 0.8rem;
+            border-radius: 999px;
+            background: rgba(96, 165, 250, 0.12);
+            border: 1px solid rgba(96, 165, 250, 0.22);
+            color: rgba(147, 197, 253, 0.95);
+            font-size: 0.72rem;
+            line-height: 1;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        .summary-kicker::after {
+            content: "";
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(90deg, rgba(96,165,250,0.32), rgba(96,165,250,0.04));
+        }
+        @media (max-width: 640px) {
+            .summary-kicker {
+                margin-bottom: 1.25rem;
+                gap: 10px;
+            }
+            .summary-kicker span {
+                font-size: 0.66rem;
+                letter-spacing: 0.14em;
+                padding: 0.4rem 0.7rem;
+            }
+        }
     </style>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
@@ -250,7 +288,7 @@
 
 <!-- ===== ГЛОБАЛЬНЫЙ РЫНОК ===== -->
 <div class="px-6 md:px-16 py-16 md:py-20">
-<p class="text-sm uppercase tracking-[0.2em] text-blue-400/70 font-semibold mb-12">Глобальный рынок</p>
+<div class="summary-kicker"><span>Глобальный рынок</span></div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
 <div class="summary-stat opacity-0">
 <div class="font-headline text-[80px] md:text-[110px] font-extrabold text-white leading-none tracking-[-0.04em]">$27</div>
@@ -297,7 +335,7 @@
 
 <!-- ===== РОССИЙСКИЙ РЫНОК ===== -->
 <div class="px-6 md:px-16 py-16 md:py-20 bg-white/[0.03]">
-<p class="text-sm uppercase tracking-[0.2em] text-blue-400/70 font-semibold mb-12">Российский рынок</p>
+<div class="summary-kicker"><span>Российский рынок</span></div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
 <div class="summary-stat opacity-0">
 <div class="font-headline text-[80px] md:text-[110px] font-extrabold text-white leading-none tracking-[-0.04em]">10,7</div>
@@ -348,7 +386,7 @@
 
 <!-- Тренды -->
 <div>
-<p class="text-sm uppercase tracking-[0.2em] text-blue-400/70 font-semibold mb-10">Тренды</p>
+<div class="summary-kicker"><span>Тренды</span></div>
 <div class="space-y-8">
 <div class="summary-stat opacity-0">
 <div class="font-headline text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-none">78%</div>
@@ -367,7 +405,7 @@
 
 <!-- Вызовы -->
 <div>
-<p class="text-sm uppercase tracking-[0.2em] text-blue-400/70 font-semibold mb-10">Вызовы</p>
+<div class="summary-kicker"><span>Вызовы</span></div>
 <div class="space-y-8">
 <div class="summary-stat opacity-0">
 <div class="font-headline text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-none">84%</div>
@@ -392,7 +430,7 @@
 
 <!-- ===== ПРОГНОЗ ===== -->
 <div class="px-6 md:px-16 py-16 md:py-20">
-<p class="text-sm uppercase tracking-[0.2em] text-blue-400/70 font-semibold mb-12">Прогноз</p>
+<div class="summary-kicker"><span>Прогноз</span></div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-16">
 <div class="summary-stat opacity-0">
 <div class="font-headline text-[80px] md:text-[110px] font-extrabold text-white leading-none tracking-[-0.04em]">42</div>
