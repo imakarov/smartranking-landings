@@ -123,6 +123,43 @@
             flex: 1;
             background: linear-gradient(90deg, rgba(96,165,250,0.32), rgba(96,165,250,0.04));
         }
+        .plaque-card {
+            background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
+            border: 1px solid rgba(59, 130, 246, 0.28);
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 10px 28px rgba(8, 28, 84, 0.18);
+        }
+        .plaque-card-top {
+            min-height: 96px;
+            background: linear-gradient(135deg, #0b58e6 0%, #1d4ed8 52%, #153a9b 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .plaque-card-top .material-symbols-outlined {
+            font-size: 3rem;
+            color: #fff;
+            font-variation-settings: 'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 48;
+        }
+        .plaque-card-body {
+            padding: 0.9rem 0.9rem 1rem;
+            border-top: 1px solid rgba(148, 163, 184, 0.18);
+            text-align: center;
+        }
+        .plaque-card-title {
+            color: #0f172a;
+            font-weight: 700;
+            font-size: 0.96rem;
+            line-height: 1.25;
+        }
+        .plaque-card-subtitle {
+            color: #64748b;
+            font-size: 0.76rem;
+            line-height: 1.3;
+            margin-top: 0.25rem;
+        }
         @media (max-width: 640px) {
             .summary-kicker {
                 margin-bottom: 1.25rem;
@@ -132,6 +169,12 @@
                 font-size: 0.66rem;
                 letter-spacing: 0.14em;
                 padding: 0.4rem 0.7rem;
+            }
+            .plaque-card-top {
+                min-height: 82px;
+            }
+            .plaque-card-top .material-symbols-outlined {
+                font-size: 2.5rem;
             }
         }
     </style>
@@ -565,23 +608,23 @@ document.addEventListener('DOMContentLoaded', () => {
 <p class="!mb-4">Согласно The Brainy Insights и Future Market Insights, основными драйверами роста являются:</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-6">
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">schedule</span><span class="font-headline font-bold text-sm text-on-background">Удобство</span></div>
 <p class="text-sm text-on-surface-variant">Возможность тренироваться в любое время и в любом месте без привязки к расписанию зала.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">savings</span><span class="font-headline font-bold text-sm text-on-background">Ценовая доступность</span></div>
 <p class="text-sm text-on-surface-variant">Подписка на онлайн-платформу в разы дешевле абонемента в фитнес-клуб.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">category</span><span class="font-headline font-bold text-sm text-on-background">Разнообразие контента</span></div>
 <p class="text-sm text-on-surface-variant">От йоги и пилатеса до высокоинтенсивных интервальных тренировок и силовых программ.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">smart_toy</span><span class="font-headline font-bold text-sm text-on-background">ИИ-персонализация</span></div>
 <p class="text-sm text-on-surface-variant">Адаптивные алгоритмы подстраивают программу под уровень и цели пользователя.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">favorite</span><span class="font-headline font-bold text-sm text-on-background">Рост осведомленности о ЗОЖ</span></div>
 <p class="text-sm text-on-surface-variant">Особенно в Китае и Индии, где стремительно увеличивается средний класс.</p>
 </div>
@@ -592,19 +635,19 @@ document.addEventListener('DOMContentLoaded', () => {
 <p class="!mb-4">Вызовы для индустрии:</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">person_off</span><span class="font-headline font-bold text-sm text-on-background">Ограниченное взаимодействие с тренером</span></div>
 <p class="text-sm text-on-surface-variant">Формат on-demand не заменяет живую коррекцию техники.</p>
 </div>
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">wifi_off</span><span class="font-headline font-bold text-sm text-on-background">Технологические барьеры</span></div>
 <p class="text-sm text-on-surface-variant">Необходимость стабильного интернета, смартфонов и носимых устройств.</p>
 </div>
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">health_and_safety</span><span class="font-headline font-bold text-sm text-on-background">Безопасность тренировок</span></div>
 <p class="text-sm text-on-surface-variant">Риск травм при отсутствии контроля со стороны специалиста.</p>
 </div>
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">group_work</span><span class="font-headline font-bold text-sm text-on-background">Насыщение рынка</span></div>
 <p class="text-sm text-on-surface-variant">Высокая конкуренция и низкие барьеры входа создают давление на маржу.</p>
 </div>
@@ -775,27 +818,27 @@ document.addEventListener('DOMContentLoaded', () => {
 <p class="!mb-4">На мировом рынке онлайн-фитнес-услуг действуют компании следующих типов:</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-6">
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">fitness_center</span><span class="font-headline font-bold text-sm text-on-background">Офлайн-сети с онлайн</span></div>
 <p class="text-sm text-on-surface-variant">Крупные фитнес-клубы, интегрирующие цифровые тренировки в свою экосистему.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">groups</span><span class="font-headline font-bold text-sm text-on-background">Групповые программы</span></div>
 <p class="text-sm text-on-surface-variant">Les Mills и другие — лицензируют контент для залов и онлайн-потребителей.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">hub</span><span class="font-headline font-bold text-sm text-on-background">Цифровые платформы</span></div>
 <p class="text-sm text-on-surface-variant">MINDBODY, Wellhub, Navigate — объединяют провайдеров и потребителей.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">watch</span><span class="font-headline font-bold text-sm text-on-background">Носимые устройства</span></div>
 <p class="text-sm text-on-surface-variant">Apple, Garmin, Whoop, Oura — создают собственные фитнес-экосистемы.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">phone_android</span><span class="font-headline font-bold text-sm text-on-background">Online-first приложения</span></div>
 <p class="text-sm text-on-surface-variant">Компании, изначально выстроенные вокруг цифрового продукта.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+<div class="plaque-card">
 <div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">auto_awesome</span><span class="font-headline font-bold text-sm text-on-background">AI-нативные приложения</span></div>
 <p class="text-sm text-on-surface-variant">Новая категория — генерируют программы динамически, без библиотеки видео.</p>
 </div>
@@ -908,28 +951,28 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>Основные форматы потребления онлайн-контента по-прежнему включают:</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">play_circle</span>
       <span class="font-headline font-bold text-sm text-on-background">Стриминг тренировок</span>
     </div>
     <p class="text-sm text-on-surface-variant">On-demand и live-классы, составляющие основу рынка (67%).</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">person</span>
       <span class="font-headline font-bold text-sm text-on-background">Персональные тренировки</span>
     </div>
     <p class="text-sm text-on-surface-variant">Видеосвязь с тренером, проверка техники, индивидуальные программы.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">smart_toy</span>
       <span class="font-headline font-bold text-sm text-on-background">ИИ-коучинг</span>
     </div>
     <p class="text-sm text-on-surface-variant">Алгоритмически генерируемые программы, адаптирующиеся к прогрессу пользователя.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">monitoring</span>
       <span class="font-headline font-bold text-sm text-on-background">Трекинг активности</span>
@@ -974,21 +1017,21 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>Ключевая тенденция — объединение данных из разных источников: появляются AI-агрегаторы, которые синхронизируются с Apple, Garmin, Oura, WHOOP и сотнями других устройств, интерпретируя в режиме реального времени все — от сна до генетических данных. Параллельно идет интеграция носимых устройств в корпоративные велнес-программы и даже в клиническую медицину — FDA уже одобрила ряд функций Apple Watch для медицинских целей, что открывает новый сегмент рынка.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6">
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">analytics</span>
       <span class="font-headline font-bold text-sm text-on-background">ИИ-агрегаторы</span>
     </div>
     <p class="text-sm text-on-surface-variant">Устройства используют машинное обучение для создания единого «скора здоровья» на основе десятков метрик.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">local_hospital</span>
       <span class="font-headline font-bold text-sm text-on-background">Клиническая интеграция</span>
     </div>
     <p class="text-sm text-on-surface-variant">Данные с носимых устройств начинают использоваться в медицине для мониторинга хронических заболеваний и раннего обнаружения отклонений.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">devices</span>
       <span class="font-headline font-bold text-sm text-on-background">Замкнутая экосистема</span>
@@ -1628,21 +1671,21 @@ document.addEventListener('DOMContentLoaded', () => {
 <p>Рейтинг можно разделить на три группы по выручке:</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6">
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">looks_one</span>
       <span class="font-headline font-bold text-sm text-on-background">Лидеры (&gt;200 млн руб.)</span>
     </div>
     <p class="text-sm text-on-surface-variant">FitStars, Anyclass, Melannett, Ревитоника, InsideOut, Sekta, SJBody, Masha.fit. Эти компании формируют основной объем рынка.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">looks_two</span>
       <span class="font-headline font-bold text-sm text-on-background">Средний сегмент (100-200 млн)</span>
     </div>
     <p class="text-sm text-on-surface-variant">GymTeam, Veryomina, Центр Марины Корпан, IRNBY, ЖЖгись, Stayfitt, Территория Сабины Филиной. Стабильный рост 6-10%.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-primary text-lg">looks_3</span>
       <span class="font-headline font-bold text-sm text-on-background">Растущие (&lt;100 млн руб.)</span>
@@ -1787,21 +1830,27 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 <div class="h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent mb-8"></div>
-<div class="grid grid-cols-3 gap-4 md:gap-6 text-center">
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">memory</span>
-<p class="text-sm font-medium text-white">Технологическое отставание</p>
-<p class="text-xs text-blue-200/60 mt-1">ИИ-коучинг остаётся нишевым</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">memory</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Технологическое отставание</p>
+<p class="plaque-card-subtitle">ИИ-коучинг остаётся нишевым</p>
 </div>
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">person_off</span>
-<p class="text-sm font-medium text-white">Удержание</p>
-<p class="text-xs text-blue-200/60 mt-1">CAC растёт, площадки нестабильны</p>
 </div>
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">gavel</span>
-<p class="text-sm font-medium text-white">Регуляторика</p>
-<p class="text-xs text-blue-200/60 mt-1">Запрет автосписаний усилит отток</p>
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">person_off</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Удержание</p>
+<p class="plaque-card-subtitle">CAC растёт, площадки нестабильны</p>
+</div>
+</div>
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">gavel</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Регуляторика</p>
+<p class="plaque-card-subtitle">Запрет автосписаний усилит отток</p>
+</div>
 </div>
 </div>
 </div>
@@ -1814,17 +1863,26 @@ document.addEventListener('DOMContentLoaded', () => {
 <p class="!mb-4">По данным исследования FitnessData, среди 606 фитнес-операторов уже <strong class="stat-highlight">84%</strong> используют специализированное ПО для автоматизации. Однако речь идет преимущественно о CRM-системах и онлайн-записи, а не об AI-коучинге или компьютерном зрении.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-3 my-6">
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">smart_toy</span><span class="font-headline font-bold text-sm text-on-background">ИИ-коучинг</span></div>
-<p class="text-sm text-on-surface-variant">Адаптивные алгоритмы, генерирующие тренировочные программы. На глобальном рынке стандарт; в России — единичные эксперименты.</p>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">smart_toy</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">ИИ-коучинг</p>
+<p class="plaque-card-subtitle">Адаптивные алгоритмы, генерирующие тренировочные программы. На глобальном рынке стандарт; в России — единичные эксперименты.</p>
 </div>
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">visibility</span><span class="font-headline font-bold text-sm text-on-background">Компьютерное зрение</span></div>
-<p class="text-sm text-on-surface-variant">Анализ техники через камеру смартфона. Tempo и Tonal используют на Западе; российских аналогов нет.</p>
 </div>
-<div class="bg-red-50/50 p-5 rounded-xl border border-red-100/50">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">view_in_ar</span><span class="font-headline font-bold text-sm text-on-background">AR/VR</span></div>
-<p class="text-sm text-on-surface-variant">Иммерсивные тренировки. Нишевые даже глобально, но Apple и Meta* активно инвестируют.</p>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">visibility</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Компьютерное зрение</p>
+<p class="plaque-card-subtitle">Анализ техники через камеру смартфона. Tempo и Tonal используют на Западе; российских аналогов нет.</p>
+</div>
+</div>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">view_in_ar</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">AR/VR</p>
+<p class="plaque-card-subtitle">Иммерсивные тренировки. Нишевые даже глобально, но Apple и Meta* активно инвестируют.</p>
+</div>
 </div>
 </div>
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
@@ -1884,33 +1942,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
 <!-- Retention cards -->
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-primary">sports_esports</span>
-<h5 class="font-headline text-base font-bold">Геймификация</h5>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">sports_esports</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Геймификация</p>
+<p class="plaque-card-subtitle">Баллы, ачивки, серии тренировок, лидерборды. Платформы с геймификацией показывают <strong class="stat-highlight">25–30%</strong> удержания на 30-й день — в 7–8 раз выше среднего.</p>
 </div>
-<p class="text-sm text-on-surface-variant">Баллы, ачивки, серии тренировок, лидерборды. Платформы с геймификацией показывают <strong class="stat-highlight">25–30%</strong> удержания на 30-й день — в 7–8 раз выше среднего.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-primary">group</span>
-<h5 class="font-headline text-base font-bold">Сообщество</h5>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">group</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Сообщество</p>
+<p class="plaque-card-subtitle">Групповые программы, чаты, челленджи. <strong class="stat-highlight">53%</strong> участников групповых программ продлевают подписку — почти вдвое больше, чем среди индивидуальных пользователей.</p>
 </div>
-<p class="text-sm text-on-surface-variant">Групповые программы, чаты, челленджи. <strong class="stat-highlight">53%</strong> участников групповых программ продлевают подписку — почти вдвое больше, чем среди индивидуальных пользователей.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-primary">show_chart</span>
-<h5 class="font-headline text-base font-bold">Визуализация прогресса</h5>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">show_chart</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Визуализация прогресса</p>
+<p class="plaque-card-subtitle">Трекинг результатов, фото до/после, графики прогрессии. <strong class="stat-highlight">59%</strong> пользователей, отслеживающих прогресс, продолжают тренироваться через 3 месяца.</p>
 </div>
-<p class="text-sm text-on-surface-variant">Трекинг результатов, фото до/после, графики прогрессии. <strong class="stat-highlight">59%</strong> пользователей, отслеживающих прогресс, продолжают тренироваться через 3 месяца.</p>
 </div>
-<div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
-<div class="flex items-center gap-2 mb-3">
-<span class="material-symbols-outlined text-primary">smart_toy</span>
-<h5 class="font-headline text-base font-bold">Сегментация и ИИ</h5>
+<div class="plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">smart_toy</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Сегментация и ИИ</p>
+<p class="plaque-card-subtitle">Персонализация контента на основе поведения и предпочтений пользователя. ИИ-персонализация показывает на <strong class="stat-highlight">50%</strong> более высокое удержание по сравнению с универсальными программами.</p>
 </div>
-<p class="text-sm text-on-surface-variant">Персонализация контента на основе поведения и предпочтений пользователя. ИИ-персонализация показывает на <strong class="stat-highlight">50%</strong> более высокое удержание по сравнению с универсальными программами.</p>
 </div>
 </div>
 </section>
@@ -1942,26 +2000,34 @@ document.addEventListener('DOMContentLoaded', () => {
 </div>
 </div>
 <div class="h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent mb-8"></div>
-<div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 text-center">
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">smart_toy</span>
-<p class="text-sm font-medium text-white">AI-персонализация</p>
-<p class="text-xs text-blue-200/60 mt-1">Адаптивные планы</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">smart_toy</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">AI-персонализация</p>
+<p class="plaque-card-subtitle">Адаптивные планы</p>
 </div>
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">elderly</span>
-<p class="text-sm font-medium text-white">Сегмент 45+</p>
-<p class="text-xs text-blue-200/60 mt-1">Бурный рост</p>
 </div>
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">self_improvement</span>
-<p class="text-sm font-medium text-white">Холистический подход</p>
-<p class="text-xs text-blue-200/60 mt-1">Тренировки + питание + сон</p>
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">elderly</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Сегмент 45+</p>
+<p class="plaque-card-subtitle">Бурный рост</p>
 </div>
-<div class="summary-stat opacity-0">
-<span class="material-symbols-outlined text-blue-300 text-2xl mb-2">sports_martial_arts</span>
-<p class="text-sm font-medium text-white">Тренеры в онлайн</p>
-<p class="text-xs text-blue-200/60 mt-1">27% уже работают</p>
+</div>
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">self_improvement</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Холистический подход</p>
+<p class="plaque-card-subtitle">Тренировки + питание + сон</p>
+</div>
+</div>
+<div class="summary-stat opacity-0 plaque-card">
+<div class="plaque-card-top"><span class="material-symbols-outlined">sports_martial_arts</span></div>
+<div class="plaque-card-body">
+<p class="plaque-card-title">Тренеры в онлайн</p>
+<p class="plaque-card-subtitle">27% уже работают</p>
+</div>
 </div>
 </div>
 </div>
@@ -2172,35 +2238,35 @@ document.addEventListener('DOMContentLoaded', () => {
 <p><strong>Точки роста на 2026–2027 годы:</strong></p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
       <span class="font-headline font-bold text-sm text-on-background">ИИ-персонализация</span>
     </div>
     <p class="text-sm text-on-surface-variant">Адаптивные программы и интеллектуальные рекомендации как способ кратно повысить удержание.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">group</span>
       <span class="font-headline font-bold text-sm text-on-background">Сегмент 45+</span>
     </div>
     <p class="text-sm text-on-surface-variant">Сегмент 45+ продолжит расти в силу демографии и взросления текущей аудитории рынка.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">swap_horiz</span>
       <span class="font-headline font-bold text-sm text-on-background">Переход тренеров в онлайн</span>
     </div>
     <p class="text-sm text-on-surface-variant">47% персональных тренеров планируют начать работать онлайн, что увеличит как предложение, так и спрос.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">spa</span>
       <span class="font-headline font-bold text-sm text-on-background">Комплексное благополучие</span>
     </div>
     <p class="text-sm text-on-surface-variant">Платформы, закрывающие тренировки, питание, сон и ментальное здоровье в едином продукте.</p>
   </div>
-  <div class="bg-surface-container-lowest p-5 rounded-xl border border-outline-variant/10">
+  <div class="plaque-card">
     <div class="flex items-center gap-2 mb-2">
       <span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">corporate_fare</span>
       <span class="font-headline font-bold text-sm text-on-background">Корпоративный сегмент</span>
