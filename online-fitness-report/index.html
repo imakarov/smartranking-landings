@@ -343,50 +343,6 @@
 <p>По оценкам <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a>, в 2025 году рынок онлайн-фитнеса оценивается в <strong class="stat-highlight">$27 млрд</strong>, а к 2035 году составит <strong class="stat-highlight">$433,7 млрд</strong> при среднегодовом темпе роста <strong class="stat-highlight">32%</strong>. <strong>67%</strong> рынка — on-demand стриминг, то есть видеотренировки, которые пользователь может открыть и пройти в любой момент. <strong>58%</strong> спроса приходится на соло-форматы, где пользователь проходит тренировки индивидуально. Еще более высокие темпы роста будут наблюдаться на развивающихся рынках Китая и Индии — 43% и 40% соответственно.</p>
 </div>
 
-<!-- Chart: Структура рынка — интерактивные donut -->
-<figure class="my-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10">
-<h4 class="font-headline text-base font-bold text-on-background mb-1">Структура мирового рынка онлайн-фитнеса</h4>
-<p class="text-xs text-on-surface-variant mb-6">Доли сегментов по формату потребления, 2025</p>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-<div class="flex justify-center"><canvas id="formatChart" style="max-width:260px;max-height:260px;"></canvas></div>
-<div class="flex justify-center"><canvas id="modeChart" style="max-width:260px;max-height:260px;"></canvas></div>
-</div>
-<figcaption class="chart-caption mt-4">Источник: <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a></figcaption>
-</figure>
-<script>
-(function(){
-  new Chart(document.getElementById('formatChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['On-demand стриминг', 'Live-классы', 'Персональные', 'Другое'],
-      datasets: [{ data: [67, 15, 12, 6], backgroundColor: ['#003d9b','#0052cc','#b2c5ff','#dae2ff'], borderWidth: 0, hoverOffset: 6 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true, cutout: '60%',
-      plugins: {
-        title: { display: true, text: 'Формат потребления', font: { family: 'Manrope', size: 14, weight: 'bold' }, color: '#131b2e', padding: { bottom: 12 } },
-        legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 11 }, padding: 12, usePointStyle: false, boxWidth: 14, boxHeight: 14 } },
-        tooltip: { backgroundColor: 'rgba(19,27,46,0.95)', titleFont: { family: 'Inter', size: 13, weight: '600' }, bodyFont: { family: 'Inter', size: 12 }, padding: 12, cornerRadius: 8 }
-      }
-    }
-  });
-  new Chart(document.getElementById('modeChart'), {
-    type: 'doughnut',
-    data: {
-      labels: ['Соло-тренировки', 'Групповые', 'С тренером'],
-      datasets: [{ data: [58, 28, 14], backgroundColor: ['#004e34','#006847','#75e8b5'], borderWidth: 0, hoverOffset: 6 }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: true, cutout: '60%',
-      plugins: {
-        title: { display: true, text: 'Режим тренировки', font: { family: 'Manrope', size: 14, weight: 'bold' }, color: '#131b2e', padding: { bottom: 12 } },
-        legend: { position: 'bottom', labels: { font: { family: 'Inter', size: 11 }, padding: 12, usePointStyle: false, boxWidth: 14, boxHeight: 14 } },
-        tooltip: { backgroundColor: 'rgba(19,27,46,0.95)', titleFont: { family: 'Inter', size: 13, weight: '600' }, bodyFont: { family: 'Inter', size: 12 }, padding: 12, cornerRadius: 8 }
-      }
-    }
-  });
-})();
-</script>
 
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
 <p>При этом объем выручки мобильных приложений в сегменте Fitness, согласно Statista, в 2026 году составит <strong class="stat-highlight">$9,9 млрд</strong>, что на 44% больше, чем в 2024-м. ARPU (средний доход от каждого пользователя) фитнес-приложений оценивается в <strong class="stat-highlight">$22,5</strong> по сравнению с $17,8 в 2024 году. SensorTower оценивает количество скачиваний фитнес-приложений в 2025 году в 4 млрд при объеме внутриигровых покупок $4,5 млрд.</p>
@@ -396,24 +352,24 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 my-6">
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">schedule</span><span class="font-headline font-bold text-sm text-on-background">Удобство</span></div>
-<p class="text-sm text-on-surface-variant">Возможность тренироваться в любое время и в любом месте без привязки к расписанию зала.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">schedule</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Удобство</p><p class="plaque-card-subtitle">Возможность тренироваться в любое время и в любом месте без привязки к расписанию зала.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">savings</span><span class="font-headline font-bold text-sm text-on-background">Ценовая доступность</span></div>
-<p class="text-sm text-on-surface-variant">Подписка на онлайн-платформу в разы дешевле абонемента в фитнес-клуб.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">savings</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Ценовая доступность</p><p class="plaque-card-subtitle">Подписка на онлайн-платформу в разы дешевле абонемента в фитнес-клуб.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">category</span><span class="font-headline font-bold text-sm text-on-background">Разнообразие контента</span></div>
-<p class="text-sm text-on-surface-variant">От йоги и пилатеса до высокоинтенсивных интервальных тренировок и силовых программ.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">category</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Разнообразие контента</p><p class="plaque-card-subtitle">От йоги и пилатеса до высокоинтенсивных интервальных тренировок и силовых программ.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">smart_toy</span><span class="font-headline font-bold text-sm text-on-background">ИИ-персонализация</span></div>
-<p class="text-sm text-on-surface-variant">Адаптивные алгоритмы подстраивают программу под уровень и цели пользователя.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">smart_toy</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">ИИ-персонализация</p><p class="plaque-card-subtitle">Адаптивные алгоритмы подстраивают программу под уровень и цели пользователя.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-primary text-lg">favorite</span><span class="font-headline font-bold text-sm text-on-background">Рост осведомленности о ЗОЖ</span></div>
-<p class="text-sm text-on-surface-variant">Особенно в Китае и Индии, где стремительно увеличивается средний класс.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">favorite</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Рост осведомленности о ЗОЖ</p><p class="plaque-card-subtitle">Особенно в Китае и Индии, где стремительно увеличивается средний класс.</p></div>
 </div>
 </div>
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
@@ -423,83 +379,24 @@
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-3 my-6">
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">person_off</span><span class="font-headline font-bold text-sm text-on-background">Ограниченное взаимодействие с тренером</span></div>
-<p class="text-sm text-on-surface-variant">Формат on-demand не заменяет живую коррекцию техники.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">person_off</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Ограниченное взаимодействие с тренером</p><p class="plaque-card-subtitle">Формат on-demand не заменяет живую коррекцию техники.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">wifi_off</span><span class="font-headline font-bold text-sm text-on-background">Технологические барьеры</span></div>
-<p class="text-sm text-on-surface-variant">Необходимость стабильного интернета, смартфонов и носимых устройств.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">wifi_off</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Технологические барьеры</p><p class="plaque-card-subtitle">Необходимость стабильного интернета, смартфонов и носимых устройств.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">health_and_safety</span><span class="font-headline font-bold text-sm text-on-background">Безопасность тренировок</span></div>
-<p class="text-sm text-on-surface-variant">Риск травм при отсутствии контроля со стороны специалиста.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">health_and_safety</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Безопасность тренировок</p><p class="plaque-card-subtitle">Риск травм при отсутствии контроля со стороны специалиста.</p></div>
 </div>
 <div class="plaque-card">
-<div class="flex items-center gap-2 mb-2"><span class="material-symbols-outlined text-error text-lg">group_work</span><span class="font-headline font-bold text-sm text-on-background">Насыщение рынка</span></div>
-<p class="text-sm text-on-surface-variant">Высокая конкуренция и низкие барьеры входа создают давление на маржу.</p>
+<div class="plaque-card-top"><span class="material-symbols-outlined">group_work</span></div>
+<div class="plaque-card-body"><p class="plaque-card-title">Насыщение рынка</p><p class="plaque-card-subtitle">Высокая конкуренция и низкие барьеры входа создают давление на маржу.</p></div>
 </div>
 </div>
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
 </div>
-
-<!-- Chart: CAGR by Country — horizontal bar chart -->
-<figure class="my-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10">
-<h4 class="font-headline text-base font-bold text-on-background mb-1">Среднегодовой темп роста (CAGR) рынка онлайн-фитнеса по странам</h4>
-<p class="text-xs text-on-surface-variant mb-6">Прогноз до 2035 года</p>
-<div class="space-y-4">
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Китай</span><span class="text-sm font-headline font-bold text-primary">43,2%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="100%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Индия</span><span class="text-sm font-headline font-bold text-primary">40,0%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="92.6%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Германия</span><span class="text-sm font-headline font-bold text-primary">36,8%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary-container/80 transition-all duration-1000 ease-out" style="width:0%" data-width="85.2%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Франция</span><span class="text-sm font-headline font-bold text-primary">33,6%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/70 to-primary-container/70 transition-all duration-1000 ease-out" style="width:0%" data-width="77.8%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Великобритания</span><span class="text-sm font-headline font-bold text-primary">30,4%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/60 to-primary-container/60 transition-all duration-1000 ease-out" style="width:0%" data-width="70.4%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">США</span><span class="text-sm font-headline font-bold text-on-surface-variant">27,2%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/50 to-outline/30 transition-all duration-1000 ease-out" style="width:0%" data-width="63.0%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Бразилия</span><span class="text-sm font-headline font-bold text-on-surface-variant">24,0%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/40 to-outline/20 transition-all duration-1000 ease-out" style="width:0%" data-width="55.6%"></div></div>
-</div>
-</div>
-<figcaption class="chart-caption mt-4">Источник: <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a></figcaption>
-</figure>
-<script>
-(function() {
-  const cO = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const bars = entry.target.querySelectorAll('.cagr-bar');
-        bars.forEach((bar, i) => {
-          setTimeout(() => {
-            bar.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-            bar.style.opacity = '1';
-            bar.style.transform = 'translateX(0)';
-            const fill = bar.querySelector('[data-width]');
-            if (fill) setTimeout(() => { fill.style.width = fill.dataset.width; }, 200);
-          }, i * 120);
-        });
-        cO.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('figure:has(.cagr-bar)').forEach(f => cO.observe(f));
-})();
-</script>
 
 <!-- Chart: Online Fitness Market Value 2020–2035 (Chart.js) -->
 <figure class="my-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10">
@@ -589,6 +486,67 @@
   });
 })();
 </script>
+
+<!-- Chart: CAGR by Country — horizontal bar chart -->
+<figure class="my-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10">
+<h4 class="font-headline text-base font-bold text-on-background mb-1">Среднегодовой темп роста (CAGR) рынка онлайн-фитнеса по странам</h4>
+<p class="text-xs text-on-surface-variant mb-6">Прогноз до 2035 года</p>
+<div class="space-y-4">
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Китай</span><span class="text-sm font-headline font-bold text-primary">43,2%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="100%"></div></div>
+</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Индия</span><span class="text-sm font-headline font-bold text-primary">40,0%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="92.6%"></div></div>
+</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Германия</span><span class="text-sm font-headline font-bold text-primary">36,8%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary-container/80 transition-all duration-1000 ease-out" style="width:0%" data-width="85.2%"></div></div>
+</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Франция</span><span class="text-sm font-headline font-bold text-primary">33,6%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/70 to-primary-container/70 transition-all duration-1000 ease-out" style="width:0%" data-width="77.8%"></div></div>
+</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Великобритания</span><span class="text-sm font-headline font-bold text-primary">30,4%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/60 to-primary-container/60 transition-all duration-1000 ease-out" style="width:0%" data-width="70.4%"></div></div>
+</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">США</span><span class="text-sm font-headline font-bold text-on-surface-variant">27,2%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/50 to-outline/30 transition-all duration-1000 ease-out" style="width:0%" data-width="63.0%"></div></div>
+</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
+<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Бразилия</span><span class="text-sm font-headline font-bold text-on-surface-variant">24,0%</span></div>
+<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/40 to-outline/20 transition-all duration-1000 ease-out" style="width:0%" data-width="55.6%"></div></div>
+</div>
+</div>
+<figcaption class="chart-caption mt-4">Источник: <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a></figcaption>
+</figure>
+<script>
+(function() {
+  const cO = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const bars = entry.target.querySelectorAll('.cagr-bar');
+        bars.forEach((bar, i) => {
+          setTimeout(() => {
+            bar.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
+            bar.style.opacity = '1';
+            bar.style.transform = 'translateX(0)';
+            const fill = bar.querySelector('[data-width]');
+            if (fill) setTimeout(() => { fill.style.width = fill.dataset.width; }, 200);
+          }, i * 120);
+        });
+        cO.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  document.querySelectorAll('figure:has(.cagr-bar)').forEach(f => cO.observe(f));
+})();
+</script>
+
+
 
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
 <h4 class="font-headline text-lg font-bold text-on-background !mb-4">Удержание пользователей</h4>
