@@ -352,9 +352,6 @@
 </div>
 <figcaption class="chart-caption mt-4">Источник: <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a></figcaption>
 </figure>
-<div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
-<p>По оценкам <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a>, в 2025 году рынок онлайн-фитнеса оценивается в <strong class="stat-highlight">$27 млрд</strong>, а к 2035 году составит <strong class="stat-highlight">$433,7 млрд</strong> при среднегодовом темпе роста <strong class="stat-highlight">32%</strong>. Еще более высокие темпы роста будут наблюдаться на развивающихся рынках Китая и Индии — 43% и 40% соответственно.</p>
-</div>
 <script>
 (function(){
   var labels = ['2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030','2031','2032','2033','2034','2035'];
@@ -363,80 +360,17 @@
   var colors = values.map(function(_,i){ return i <= 4 ? '#b2c5ff' : '#003d9b'; });
   new Chart(document.getElementById('fmiChart'),{
     type:'bar',
-    data:{
-      labels: labels,
-      datasets:[
-        {
-          label:'Объём рынка, $ млрд',
-          data: values,
-          backgroundColor: colors,
-          borderRadius: 4,
-          borderSkipped: false,
-          order: 2,
-          yAxisID: 'y'
-        },
-        {
-          label:'Y-o-Y рост, %',
-          data: growth,
-          type:'line',
-          borderColor:'#004e34',
-          backgroundColor:'transparent',
-          borderWidth: 2,
-          tension: 0.3,
-          pointRadius: 3,
-          pointBackgroundColor:'#004e34',
-          pointBorderColor:'#fff',
-          pointBorderWidth: 1.5,
-          order: 1,
-          yAxisID: 'y1'
-        }
-      ]
-    },
-    options:{
-      responsive: true,
-      maintainAspectRatio: true,
-      aspectRatio: 2,
-      interaction:{ mode:'index', intersect: false },
-      plugins:{
-        legend:{ display:true, position:'bottom', labels:{ font:{ family:'Inter', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }},
-        tooltip:{
-          backgroundColor:'rgba(19,27,46,0.95)',
-          titleFont:{ family:'Inter', size:13, weight:'600' },
-          bodyFont:{ family:'Inter', size:12 },
-          padding:12, cornerRadius:8,
-          callbacks:{
-            label: function(item){
-              if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд';
-              if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост';
-              return null;
-            }
-          }
-        }
-      },
-      scales:{
-        x:{ grid:{ display:false }, ticks:{ font:{ family:'Inter', size:11 }, color:'#737685' }},
-        y:{
-          position:'left',
-          grid:{ color:'rgba(195,198,214,0.2)' },
-          border:{ display:false },
-          ticks:{ font:{ family:'Inter', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } },
-          beginAtZero: true
-        },
-        y1:{
-          position:'right',
-          grid:{ drawOnChartArea:false },
-          border:{ display:false },
-          min: 25, max: 40,
-          ticks:{ font:{ family:'Inter', size:11 }, color:'#004e34', callback: function(v){ return v+'%'; } }
-        }
-      }
-    }
+    data:{ labels: labels, datasets:[
+      { label:'Объём рынка, $ млрд', data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false, order: 2, yAxisID: 'y' },
+      { label:'Y-o-Y рост, %', data: growth, type:'line', borderColor:'#004e34', backgroundColor:'transparent', borderWidth: 2, tension: 0.3, pointRadius: 3, pointBackgroundColor:'#004e34', pointBorderColor:'#fff', pointBorderWidth: 1.5, order: 1, yAxisID: 'y1' }
+    ]},
+    options:{ responsive: true, maintainAspectRatio: true, aspectRatio: 2, interaction:{ mode:'index', intersect: false }, plugins:{ legend:{ display:true, position:'bottom', labels:{ font:{ family:'Inter', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }}, tooltip:{ backgroundColor:'rgba(19,27,46,0.95)', titleFont:{ family:'Inter', size:13, weight:'600' }, bodyFont:{ family:'Inter', size:12 }, padding:12, cornerRadius:8, callbacks:{ label: function(item){ if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд'; if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост'; return null; } } } }, scales:{ x:{ grid:{ display:false }, ticks:{ font:{ family:'Inter', size:11 }, color:'#737685' }}, y:{ position:'left', grid:{ color:'rgba(195,198,214,0.2)' }, border:{ display:false }, ticks:{ font:{ family:'Inter', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } }, beginAtZero: true }, y1:{ position:'right', grid:{ drawOnChartArea:false }, border:{ display:false }, min: 25, max: 40, ticks:{ font:{ family:'Inter', size:11 }, color:'#004e34', callback: function(v){ return v+'%'; } } } } }
   });
 })();
 </script>
 
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
-<p>По оценкам <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a>, в 2025 году рынок онлайн-фитнеса оценивается в <strong class="stat-highlight">$27 млрд</strong>, а к 2035 году составит <strong class="stat-highlight">$433,7 млрд</strong> при среднегодовом темпе роста <strong class="stat-highlight">32%</strong>. Еще более высокие темпы роста будут наблюдаться на развивающихся рынках Китая и Индии — 43% и 40% соответственно.</p>
+<p>Еще более высокие темпы роста будут наблюдаться на развивающихся рынках Китая и Индии — 43% и 40% соответственно.</p>
 </div>
 
 <!-- Chart: CAGR by Country — horizontal bar chart -->
@@ -444,44 +378,16 @@
 <h4 class="font-headline text-base font-bold text-on-background mb-1">Среднегодовой темп роста (CAGR) рынка онлайн-фитнеса по странам</h4>
 <p class="text-xs text-on-surface-variant mb-6">Прогноз до 2035 года</p>
 <div class="space-y-4">
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Китай</span><span class="text-sm font-headline font-bold text-primary">43,2%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="100%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Индия</span><span class="text-sm font-headline font-bold text-primary">40,0%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="92.6%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Германия</span><span class="text-sm font-headline font-bold text-primary">36,8%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary-container/80 transition-all duration-1000 ease-out" style="width:0%" data-width="85.2%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Франция</span><span class="text-sm font-headline font-bold text-primary">33,6%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/70 to-primary-container/70 transition-all duration-1000 ease-out" style="width:0%" data-width="77.8%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Великобритания</span><span class="text-sm font-headline font-bold text-primary">30,4%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/60 to-primary-container/60 transition-all duration-1000 ease-out" style="width:0%" data-width="70.4%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">США</span><span class="text-sm font-headline font-bold text-on-surface-variant">27,2%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/50 to-outline/30 transition-all duration-1000 ease-out" style="width:0%" data-width="63.0%"></div></div>
-</div>
-<div class="cagr-bar opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Бразилия</span><span class="text-sm font-headline font-bold text-on-surface-variant">24,0%</span></div>
-<div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/40 to-outline/20 transition-all duration-1000 ease-out" style="width:0%" data-width="55.6%"></div></div>
-</div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Китай</span><span class="text-sm font-headline font-bold text-primary">43,2%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="100%"></div></div></div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Индия</span><span class="text-sm font-headline font-bold text-primary">40,0%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="92.6%"></div></div></div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Германия</span><span class="text-sm font-headline font-bold text-primary">36,8%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/80 to-primary-container/80 transition-all duration-1000 ease-out" style="width:0%" data-width="85.2%"></div></div></div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Франция</span><span class="text-sm font-headline font-bold text-primary">33,6%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/70 to-primary-container/70 transition-all duration-1000 ease-out" style="width:0%" data-width="77.8%"></div></div></div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Великобритания</span><span class="text-sm font-headline font-bold text-primary">30,4%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-primary/60 to-primary-container/60 transition-all duration-1000 ease-out" style="width:0%" data-width="70.4%"></div></div></div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">США</span><span class="text-sm font-headline font-bold text-on-surface-variant">27,2%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/50 to-outline/30 transition-all duration-1000 ease-out" style="width:0%" data-width="63.0%"></div></div></div>
+<div class="cagr-bar opacity-0" style="transform:translateX(-20px)"><div class="flex items-center justify-between mb-1"><span class="text-sm font-medium text-on-background">Бразилия</span><span class="text-sm font-headline font-bold text-on-surface-variant">24,0%</span></div><div class="w-full h-8 bg-surface-container rounded-full overflow-hidden"><div class="h-full rounded-full bg-gradient-to-r from-outline/40 to-outline/20 transition-all duration-1000 ease-out" style="width:0%" data-width="55.6%"></div></div></div>
 </div>
 <figcaption class="chart-caption mt-4">Источник: <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a></figcaption>
 </figure>
-<div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
-<p><strong>67%</strong> рынка — on-demand стриминг, то есть видеотренировки, которые пользователь может открыть и пройти в любой момент. <strong>58%</strong> спроса приходится на соло-форматы, где пользователь проходит тренировки индивидуально.</p>
-<p>При этом объем выручки мобильных приложений в сегменте Fitness, согласно <a href="https://www.statista.com/outlook/hmo/digital-health/digital-fitness-well-being/health-wellness-coaching/fitness-apps/worldwide" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Statista</a>, в 2026 году составит <strong class="stat-highlight">$9,9 млрд</strong>, что на 44% больше, чем в 2024-м. ARPU (средний доход от каждого пользователя) фитнес-приложений оценивается в <strong class="stat-highlight">$22,5</strong> по сравнению с $17,8 в 2024 году. <a href="https://sensortower.com/blog/health-and-fitness-apps-ai" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">SensorTower</a> оценивает количество скачиваний фитнес-приложений в 2025 году в 4 млрд при объеме внутриигровых покупок $4,5 млрд.</p>
-
-<h4 class="font-headline text-lg font-bold text-on-background !mt-8 !mb-4">Драйверы роста</h4>
-<p class="!mb-4">Согласно <a href="https://www.thebrainyinsights.com/report/virtual-online-fitness-market-13940" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">The Brainy Insights</a> и <a href="https://www.futuremarketinsights.com/reports/online-fitness-market" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Future Market Insights</a>, основными драйверами роста являются:</p>
-</div>
 <script>
 (function() {
   const cO = new IntersectionObserver((entries) => {
@@ -497,7 +403,6 @@
             if (fill) setTimeout(() => { fill.style.width = fill.dataset.width; }, 200);
           }, i * 120);
         });
-        cO.unobserve(entry.target);
       }
     });
   }, { threshold: 0.2 });
