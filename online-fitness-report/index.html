@@ -5,7 +5,7 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Итоги 2025 года на рынке онлайн-фитнеса в России — Smart Ranking</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script>
       tailwind.config = {
@@ -57,9 +57,9 @@
                     "full": "0.75rem"
             },
             "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Inter"],
-                    "label": ["Inter"]
+                    "headline": ["IBM Plex Sans"],
+                    "body": ["IBM Plex Sans"],
+                    "label": ["IBM Plex Sans"]
             }
           },
         },
@@ -364,7 +364,7 @@
       { label:'Объём рынка, $ млрд', data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false, order: 2, yAxisID: 'y' },
       { label:'Y-o-Y рост, %', data: growth, type:'line', borderColor:'#004e34', backgroundColor:'transparent', borderWidth: 2, tension: 0.3, pointRadius: 3, pointBackgroundColor:'#004e34', pointBorderColor:'#fff', pointBorderWidth: 1.5, order: 1, yAxisID: 'y1' }
     ]},
-    options:{ responsive: true, maintainAspectRatio: true, aspectRatio: 2, interaction:{ mode:'index', intersect: false }, plugins:{ legend:{ display:true, position:'bottom', labels:{ font:{ family:'Inter', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }}, tooltip:{ backgroundColor:'rgba(19,27,46,0.95)', titleFont:{ family:'Inter', size:13, weight:'600' }, bodyFont:{ family:'Inter', size:12 }, padding:12, cornerRadius:8, callbacks:{ label: function(item){ if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд'; if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост'; return null; } } } }, scales:{ x:{ grid:{ display:false }, ticks:{ font:{ family:'Inter', size:11 }, color:'#737685' }}, y:{ position:'left', grid:{ color:'rgba(195,198,214,0.2)' }, border:{ display:false }, ticks:{ font:{ family:'Inter', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } }, beginAtZero: true }, y1:{ position:'right', grid:{ drawOnChartArea:false }, border:{ display:false }, min: 25, max: 40, ticks:{ font:{ family:'Inter', size:11 }, color:'#004e34', callback: function(v){ return v+'%'; } } } } }
+    options:{ responsive: true, maintainAspectRatio: true, aspectRatio: 2, interaction:{ mode:'index', intersect: false }, plugins:{ legend:{ display:true, position:'bottom', labels:{ font:{ family:'IBM Plex Sans', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }}, tooltip:{ backgroundColor:'rgba(19,27,46,0.95)', titleFont:{ family:'IBM Plex Sans', size:13, weight:'600' }, bodyFont:{ family:'IBM Plex Sans', size:12 }, padding:12, cornerRadius:8, callbacks:{ label: function(item){ if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд'; if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост'; return null; } } } }, scales:{ x:{ grid:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685' }}, y:{ position:'left', grid:{ color:'rgba(195,198,214,0.2)' }, border:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } }, beginAtZero: true }, y1:{ position:'right', grid:{ drawOnChartArea:false }, border:{ display:false }, min: 25, max: 40, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#004e34', callback: function(v){ return v+'%'; } } } } }
   });
 })();
 </script>
@@ -848,8 +848,8 @@
         legend: { display: false },
         tooltip: {
           backgroundColor: 'rgba(19, 27, 46, 0.95)',
-          titleFont: { family: 'Inter', size: 13, weight: '600' },
-          bodyFont: { family: 'Inter', size: 12 },
+          titleFont: { family: 'IBM Plex Sans', size: 13, weight: '600' },
+          bodyFont: { family: 'IBM Plex Sans', size: 12 },
           padding: 12,
           cornerRadius: 8,
           callbacks: {
@@ -867,7 +867,7 @@
         x: {
           grid: { display: false },
           ticks: {
-            font: { family: 'Inter', size: 11 },
+            font: { family: 'IBM Plex Sans', size: 11 },
             color: '#737685',
             maxRotation: 0,
             callback: function(value, index) {
@@ -885,7 +885,7 @@
           grid: { color: 'rgba(195, 198, 214, 0.2)' },
           border: { display: false },
           ticks: {
-            font: { family: 'Inter', size: 11 },
+            font: { family: 'IBM Plex Sans', size: 11 },
             color: '#737685',
             callback: function(value) {
               return (value / 1000).toFixed(0) + ' \u0442\u044B\u0441.';
@@ -968,8 +968,8 @@
         legend: { display: false },
         tooltip: {
           backgroundColor: 'rgba(19, 27, 46, 0.95)',
-          titleFont: { family: 'Inter', size: 13, weight: '600' },
-          bodyFont: { family: 'Inter', size: 12 },
+          titleFont: { family: 'IBM Plex Sans', size: 13, weight: '600' },
+          bodyFont: { family: 'IBM Plex Sans', size: 12 },
           padding: 12,
           cornerRadius: 8,
           callbacks: {
@@ -984,7 +984,7 @@
       scales: {
         x: {
           grid: { display: false },
-          ticks: { font: { family: 'Inter', size: 11 }, color: '#737685', maxRotation: 45 }
+          ticks: { font: { family: 'IBM Plex Sans', size: 11 }, color: '#737685', maxRotation: 45 }
         },
         y: {
           grid: { color: 'rgba(195, 198, 214, 0.2)' },
@@ -992,7 +992,7 @@
           min: 20000,
           max: 45000,
           ticks: {
-            font: { family: 'Inter', size: 11 },
+            font: { family: 'IBM Plex Sans', size: 11 },
             color: '#737685',
             callback: function(v) { return (v / 1000).toFixed(0) + ' тыс.'; }
           }
