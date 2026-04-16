@@ -23,26 +23,26 @@
                     "background": "#faf8ff",
                     "on-surface-variant": "#434654",
                     "inverse-on-surface": "#eef0ff",
-                    "primary-fixed-dim": "#b2c5ff",
+                    "primary-fixed-dim": "#B8CCEA",
                     "surface-container-high": "#e2e7ff",
                     "surface-container": "#eaedff",
-                    "primary-container": "#0052cc",
+                    "primary-container": "#0351C1",
                     "surface-dim": "#d2d9f4",
                     "surface-container-highest": "#dae2fd",
-                    "inverse-primary": "#b2c5ff",
+                    "inverse-primary": "#B8CCEA",
                     "on-tertiary": "#ffffff",
-                    "primary": "#003d9b",
+                    "primary": "#0351C1",
                     "inverse-surface": "#283044",
                     "outline": "#737685",
                     "outline-variant": "#c3c6d6",
                     "error": "#ba1a1a",
-                    "tertiary": "#004e34",
+                    "tertiary": "#071D49",
                     "surface-bright": "#faf8ff",
                     "surface-variant": "#dae2fd",
                     "on-background": "#131b2e",
                     "on-error": "#ffffff",
                     "surface-container-low": "#f2f3ff",
-                    "primary-fixed": "#dae2ff",
+                    "primary-fixed": "#B8CCEA",
                     "on-secondary-container": "#57657a",
                     "on-primary-container": "#c4d2ff",
                     "on-secondary": "#ffffff",
@@ -77,8 +77,8 @@
         html { scroll-behavior: smooth; }
         .report-table { border-collapse: separate; border-spacing: 0; }
         .report-table th { position: sticky; top: 0; }
-        .quote-card { border-left: 4px solid #003d9b; }
-        .stat-highlight { color: #003d9b; font-weight: 700; }
+        .quote-card { border-left: 4px solid #0351C1; }
+        .stat-highlight { color: #0351C1; font-weight: 700; }
         .chart-caption { font-size: 0.8rem; color: #737685; text-align: center; margin-top: 0.5rem; }
         @media (max-width: 640px) {
             .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
@@ -93,7 +93,7 @@
             transform: translateY(0);
         }
         section h3 {
-            border-left: 3px solid #003d9b;
+            border-left: 3px solid #0351C1;
             padding-left: 12px;
         }
         .summary-kicker {
@@ -107,9 +107,9 @@
             align-items: center;
             padding: 0.45rem 0.8rem;
             border-radius: 999px;
-            background: rgba(96, 165, 250, 0.12);
-            border: 1px solid rgba(96, 165, 250, 0.22);
-            color: rgba(147, 197, 253, 0.95);
+            background: rgba(184, 204, 234, 0.22);
+            border: 1px solid rgba(184, 204, 234, 0.35);
+            color: rgba(184, 204, 234, 0.98);
             font-size: 0.72rem;
             line-height: 1;
             letter-spacing: 0.18em;
@@ -121,18 +121,18 @@
             content: "";
             height: 1px;
             flex: 1;
-            background: linear-gradient(90deg, rgba(96,165,250,0.32), rgba(96,165,250,0.04));
+            background: linear-gradient(90deg, rgba(184,204,234,0.45), rgba(184,204,234,0.08));
         }
         .plaque-card {
             background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
-            border: 1px solid rgba(59, 130, 246, 0.28);
+            border: 1px solid rgba(3, 81, 193, 0.24);
             border-radius: 1rem;
             overflow: hidden;
-            box-shadow: 0 10px 28px rgba(8, 28, 84, 0.18);
+            box-shadow: 0 10px 28px rgba(7, 29, 73, 0.22);
         }
         .plaque-card-top {
             min-height: 96px;
-            background: linear-gradient(135deg, #0b58e6 0%, #1d4ed8 52%, #153a9b 100%);
+            background: linear-gradient(135deg, #0351C1 0%, #0351C1 52%, #071D49 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -169,7 +169,7 @@
         }
         .bubble-node {
             border-radius: 999px;
-            background: radial-gradient(circle at 30% 30%, #4f8cff 0%, #2563eb 38%, #163ea3 100%);
+            background: radial-gradient(circle at 30% 30%, #B8CCEA 0%, #0351C1 38%, #071D49 100%);
             color: white;
             box-shadow: 0 14px 34px rgba(20, 58, 163, 0.24);
             border: 1px solid rgba(255,255,255,0.14);
@@ -412,14 +412,14 @@
   var labels = ['2020','2021','2022','2023','2024','2025','2026','2027','2028','2029','2030','2031','2032','2033','2034','2035'];
   var values = [6.7, 8.9, 11.7, 15.5, 20.5, 27.0, 35.6, 47.1, 62.1, 82.0, 108.2, 142.9, 188.6, 248.9, 328.6, 433.7];
   var growth = [null, 32.8, 31.5, 32.5, 32.3, 31.7, 31.9, 32.3, 31.8, 32.0, 31.9, 32.1, 32.0, 32.0, 32.0, 32.0];
-  var colors = values.map(function(_,i){ return i <= 4 ? '#b2c5ff' : '#003d9b'; });
+  var colors = values.map(function(_,i){ return i <= 4 ? '#B8CCEA' : '#0351C1'; });
   new Chart(document.getElementById('fmiChart'),{
     type:'bar',
     data:{ labels: labels, datasets:[
       { label:'Объём рынка, $ млрд', data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false, order: 2, yAxisID: 'y' },
-      { label:'Y-o-Y рост, %', data: growth, type:'line', borderColor:'#004e34', backgroundColor:'transparent', borderWidth: 2, tension: 0.3, pointRadius: 3, pointBackgroundColor:'#004e34', pointBorderColor:'#fff', pointBorderWidth: 1.5, order: 1, yAxisID: 'y1' }
+      { label:'Y-o-Y рост, %', data: growth, type:'line', borderColor:'#071D49', backgroundColor:'transparent', borderWidth: 2, tension: 0.3, pointRadius: 3, pointBackgroundColor:'#071D49', pointBorderColor:'#fff', pointBorderWidth: 1.5, order: 1, yAxisID: 'y1' }
     ]},
-    options:{ responsive: true, maintainAspectRatio: true, aspectRatio: 2, interaction:{ mode:'index', intersect: false }, plugins:{ legend:{ display:true, position:'bottom', labels:{ font:{ family:'IBM Plex Sans', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }}, tooltip:{ backgroundColor:'rgba(19,27,46,0.95)', titleFont:{ family:'IBM Plex Sans', size:13, weight:'600' }, bodyFont:{ family:'IBM Plex Sans', size:12 }, padding:12, cornerRadius:8, callbacks:{ label: function(item){ if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд'; if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост'; return null; } } } }, scales:{ x:{ grid:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685' }}, y:{ position:'left', grid:{ color:'rgba(195,198,214,0.2)' }, border:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } }, beginAtZero: true }, y1:{ position:'right', grid:{ drawOnChartArea:false }, border:{ display:false }, min: 25, max: 40, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#004e34', callback: function(v){ return v+'%'; } } } } }
+    options:{ responsive: true, maintainAspectRatio: true, aspectRatio: 2, interaction:{ mode:'index', intersect: false }, plugins:{ legend:{ display:true, position:'bottom', labels:{ font:{ family:'IBM Plex Sans', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }}, tooltip:{ backgroundColor:'rgba(19,27,46,0.95)', titleFont:{ family:'IBM Plex Sans', size:13, weight:'600' }, bodyFont:{ family:'IBM Plex Sans', size:12 }, padding:12, cornerRadius:8, callbacks:{ label: function(item){ if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд'; if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост'; return null; } } } }, scales:{ x:{ grid:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685' }}, y:{ position:'left', grid:{ color:'rgba(195,198,214,0.2)' }, border:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } }, beginAtZero: true }, y1:{ position:'right', grid:{ drawOnChartArea:false }, border:{ display:false }, min: 25, max: 40, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#071D49', callback: function(v){ return v+'%'; } } } } }
   });
 })();
 </script>
@@ -762,7 +762,7 @@
 <div class="mx-4 md:mx-12 h-px bg-outline-variant/20"></div>
 
 <!-- ==================== ЧАСТЬ 2. РОССИЙСКИЙ РЫНОК ==================== -->
-<div id="part2" class="bg-gradient-to-br from-[#0e1a30] via-[#112a5e] to-[#1e4488] text-white px-4 md:px-12 py-12 md:py-16 rounded-none md:rounded-2xl md:mx-4 my-6">
+<div id="part2" class="bg-gradient-to-br from-[#071D49] via-[#0351C1] to-[#0351C1] text-white px-4 md:px-12 py-12 md:py-16 rounded-none md:rounded-2xl md:mx-4 my-6">
 <div class="flex items-center gap-3 mb-6">
 <span class="inline-flex items-center justify-center w-8 h-8 rounded-md bg-white/15 text-white text-sm font-headline font-bold">2</span>
 <span class="font-label text-xs uppercase tracking-[0.2em] text-blue-300 font-semibold">Часть вторая</span>
@@ -869,14 +869,14 @@
         {
           label: 'Запросы в месяц',
           data: data,
-          borderColor: '#003d9b',
+          borderColor: '#0351C1',
           backgroundColor: 'rgba(0, 61, 155, 0.10)',
           borderWidth: 2,
           fill: true,
           tension: 0.3,
           pointRadius: 0,
           pointHoverRadius: 5,
-          pointHoverBackgroundColor: '#003d9b',
+          pointHoverBackgroundColor: '#0351C1',
           pointHoverBorderColor: '#ffffff',
           pointHoverBorderWidth: 2,
           order: 1
@@ -989,13 +989,13 @@
         {
           label: 'Запросы в месяц',
           data: data2,
-          borderColor: '#003d9b',
+          borderColor: '#0351C1',
           backgroundColor: 'rgba(0, 61, 155, 0.08)',
           borderWidth: 2.5,
           fill: true,
           tension: 0.35,
           pointRadius: 3,
-          pointBackgroundColor: '#003d9b',
+          pointBackgroundColor: '#0351C1',
           pointBorderColor: '#fff',
           pointBorderWidth: 1.5,
           pointHoverRadius: 6,
@@ -1135,21 +1135,21 @@
 </thead>
 <tbody>
 <!-- Top 3 highlighted -->
-<tr class="bg-[#fff8e1]">
+<tr class="bg-[#FCD757]">
 <td class="text-center px-3 py-3 font-bold text-primary">1</td>
 <td class="px-3 py-3 font-bold text-on-background">FitStars</td>
 <td class="px-3 py-3 text-right">1 200</td>
 <td class="px-3 py-3 text-right font-bold stat-highlight">2 200</td>
 <td class="px-3 py-3 text-right font-bold text-tertiary">+83</td>
 </tr>
-<tr class="bg-[#fff8e1]/60">
+<tr class="bg-[#FCD757]/60">
 <td class="text-center px-3 py-3 font-bold text-primary">2</td>
 <td class="px-3 py-3 font-bold text-on-background">Anyclass</td>
 <td class="px-3 py-3 text-right">467</td>
 <td class="px-3 py-3 text-right font-bold stat-highlight">528</td>
 <td class="px-3 py-3 text-right font-bold text-tertiary">+13</td>
 </tr>
-<tr class="bg-[#fff8e1]/30">
+<tr class="bg-[#FCD757]/30">
 <td class="text-center px-3 py-3 font-bold text-primary">3</td>
 <td class="px-3 py-3 font-bold text-on-background">Melannett</td>
 <td class="px-3 py-3 text-right">264</td>
