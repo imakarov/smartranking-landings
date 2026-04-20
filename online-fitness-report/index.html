@@ -7,6 +7,15 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<style>
+      @font-face {
+        font-family: 'Stratos';
+        src: local('Stratos Regular'), local('Stratos');
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
 <script>
       tailwind.config = {
         darkMode: "class",
@@ -57,7 +66,7 @@
                     "full": "0.75rem"
             },
             "fontFamily": {
-                    "headline": ["IBM Plex Sans"],
+                    "headline": ["Stratos", "IBM Plex Sans"],
                     "body": ["IBM Plex Sans"],
                     "label": ["IBM Plex Sans"]
             }
@@ -91,6 +100,15 @@
         section.visible, figure.visible, .quote-card.visible {
             opacity: 1;
             transform: translateY(0);
+        }
+        h1, h2, h3, .font-headline,
+        .summary-kicker span,
+        .stat-highlight,
+        .plaque-card-title,
+        .bubble-node-title,
+        .bubble-node-meta {
+            font-family: 'Stratos', 'IBM Plex Sans', sans-serif;
+            font-weight: 400;
         }
         section h3 {
             border-left: 3px solid #0351C1;
