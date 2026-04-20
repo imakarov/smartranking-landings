@@ -220,64 +220,42 @@
             font-weight: 500;
         }
         .keyword-cloud {
-            position: relative;
-            min-height: 440px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            justify-content: center;
             padding: 1.5rem;
             background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
             border: 1px solid rgba(3,81,193,0.12);
             border-radius: 1rem;
             box-shadow: 0 10px 28px rgba(7,29,73,0.08);
-            overflow: hidden;
         }
         .keyword-chip {
-            position: absolute;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
             line-height: 1;
             font-family: 'Stratos', 'IBM Plex Sans', sans-serif;
             font-weight: 400;
-            transition: transform 0.2s ease;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             cursor: default;
-            white-space: nowrap;
-            background: transparent;
         }
         .keyword-chip:hover {
-            transform: scale(1.04);
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 18px rgba(7,29,73,0.12);
         }
-        .keyword-size-1 { font-size: 0.72rem; }
-        .keyword-size-2 { font-size: 1.02rem; }
-        .keyword-size-3 { font-size: 1.55rem; }
-        .keyword-size-4 { font-size: 3.3rem; }
-        .keyword-c1 { color: #0351C1; }
-        .keyword-c2 { color: #FCD757; }
-        .keyword-c3 { color: #B8CCEA; }
-        .keyword-c4 { color: #F93812; }
-        .keyword-c5 { color: #05CE7C; }
-        .keyword-cloud .k1 { top: 44%; left: 15%; }
-        .keyword-cloud .k2 { top: 57%; left: 31%; }
-        .keyword-cloud .k3 { top: 38%; left: 41%; }
-        .keyword-cloud .k4 { top: 56%; left: 17%; }
-        .keyword-cloud .k5 { top: 66%; left: 38%; }
-        .keyword-cloud .k6 { top: 76%; left: 34%; }
-        .keyword-cloud .k7 { top: 29%; left: 25%; }
-        .keyword-cloud .k8 { top: 18%; left: 18%; }
-        .keyword-cloud .k9 { top: 12%; left: 16%; }
-        .keyword-cloud .k10 { top: 36%; left: 18%; }
-        .keyword-cloud .k11 { top: 72%; left: 18%; }
-        .keyword-cloud .k12 { top: 84%; left: 50%; }
-        .keyword-cloud .k13 { top: 76%; left: 7%; }
-        .keyword-cloud .k14 { top: 57%; left: 72%; }
-        .keyword-cloud .k15 { top: 84%; left: 23%; }
-        .keyword-cloud .k16 { top: 74%; left: 12%; }
-        .keyword-cloud .k17 { top: 91%; left: 29%; }
-        .keyword-cloud .k18 { top: 66%; left: 76%; }
-        .keyword-cloud .k19 { top: 80%; left: 76%; }
-        .keyword-cloud .k20 { top: 64%; left: 3%; }
-        @media (max-width: 768px) {
-            .keyword-cloud { min-height: 360px; }
-            .keyword-size-4 { font-size: 2.3rem; }
-            .keyword-size-3 { font-size: 1.2rem; }
-            .keyword-size-2 { font-size: 0.88rem; }
-            .keyword-size-1 { font-size: 0.62rem; }
-        }
+        .keyword-size-1 { font-size: 0.8rem; }
+        .keyword-size-2 { font-size: 1rem; }
+        .keyword-size-3 { font-size: 1.25rem; }
+        .keyword-size-4 { font-size: 1.7rem; }
+        .keyword-c1 { color: #0351C1; background: rgba(3,81,193,0.08); }
+        .keyword-c2 { color: #7C3AED; background: rgba(124,58,237,0.08); }
+        .keyword-c3 { color: #06B6D4; background: rgba(6,182,212,0.08); }
+        .keyword-c4 { color: #F97316; background: rgba(249,115,22,0.08); }
+        .keyword-c5 { color: #10B981; background: rgba(16,185,129,0.08); }
         .chart-card {
             background: #fff;
             border: 1px solid rgba(3,81,193,0.12);
@@ -732,26 +710,26 @@
     <h5 class="font-headline text-lg font-bold text-on-background mb-1">Ключевые слова, наиболее часто используемые в приложениях для отслеживания питания и диет с помощью ИИ</h5>
     <p class="text-sm text-on-surface-variant mb-4"></p>
     <div class="keyword-cloud" aria-label="Облако AI-ключевых слов">
-      <span class="keyword-chip keyword-size-4 keyword-c3 k1">Ai Calorie Tracker</span>
-      <span class="keyword-chip keyword-size-4 keyword-c1 k2">Ai Cal</span>
-      <span class="keyword-chip keyword-size-3 keyword-c2 k3">Cal Ai</span>
-      <span class="keyword-chip keyword-size-3 keyword-c4 k4">Ai Food Tracker</span>
-      <span class="keyword-chip keyword-size-3 keyword-c5 k5">Ai Food Scanner</span>
-      <span class="keyword-chip keyword-size-3 keyword-c4 k6">Calorie Counter Ai</span>
-      <span class="keyword-chip keyword-size-2 keyword-c5 k7">Ai Calorie Counter</span>
-      <span class="keyword-chip keyword-size-2 keyword-c3 k8">Food Ai Calorie Tracker</span>
-      <span class="keyword-chip keyword-size-2 keyword-c2 k9">Bitepal Ai Calorie Tracker</span>
-      <span class="keyword-chip keyword-size-2 keyword-c5 k10">Ai Food</span>
-      <span class="keyword-chip keyword-size-2 keyword-c4 k11">Diet Ai</span>
-      <span class="keyword-chip keyword-size-2 keyword-c5 k12">Cal Ai Free</span>
-      <span class="keyword-chip keyword-size-2 keyword-c3 k13">Ai Macro Tracker</span>
-      <span class="keyword-chip keyword-size-2 keyword-c3 k14">Ai Meal Scanner</span>
-      <span class="keyword-chip keyword-size-1 keyword-c2 k15">Ai Meal Planner</span>
-      <span class="keyword-chip keyword-size-1 keyword-c5 k16">Call Ai</span>
-      <span class="keyword-chip keyword-size-1 keyword-c5 k17">Cal Bot Ai Calorie Tracker</span>
-      <span class="keyword-chip keyword-size-1 keyword-c5 k18">Cai Ai</span>
-      <span class="keyword-chip keyword-size-1 keyword-c4 k19">Ai Diet Planner</span>
-      <span class="keyword-chip keyword-size-1 keyword-c5 k20">Ai Calorie Tracker Scanner</span>
+      <span class="keyword-chip keyword-size-4 keyword-c3">Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-4 keyword-c4">Ai Food Tracker</span>
+      <span class="keyword-chip keyword-size-3 keyword-c2">Cal Ai</span>
+      <span class="keyword-chip keyword-size-3 keyword-c1">Ai Cal</span>
+      <span class="keyword-chip keyword-size-3 keyword-c5">Ai Food Scanner</span>
+      <span class="keyword-chip keyword-size-3 keyword-c4">Calorie Counter Ai</span>
+      <span class="keyword-chip keyword-size-2 keyword-c5">Ai Calorie Counter</span>
+      <span class="keyword-chip keyword-size-2 keyword-c1">Food Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-2 keyword-c2">Bitepal Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-2 keyword-c3">Ai Food</span>
+      <span class="keyword-chip keyword-size-2 keyword-c4">Diet Ai</span>
+      <span class="keyword-chip keyword-size-2 keyword-c5">Cal Ai Free</span>
+      <span class="keyword-chip keyword-size-2 keyword-c1">Ai Macro Tracker</span>
+      <span class="keyword-chip keyword-size-2 keyword-c3">Ai Meal Scanner</span>
+      <span class="keyword-chip keyword-size-1 keyword-c2">Ai Meal Planner</span>
+      <span class="keyword-chip keyword-size-1 keyword-c5">Call Ai</span>
+      <span class="keyword-chip keyword-size-1 keyword-c4">Cal Bot Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-1 keyword-c1">Cai Ai</span>
+      <span class="keyword-chip keyword-size-1 keyword-c3">Ai Diet Planner</span>
+      <span class="keyword-chip keyword-size-1 keyword-c2">Ai Calorie Tracker Scanner</span>
     </div>
   </div>
   <div class="chart-card">
