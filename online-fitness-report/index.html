@@ -219,6 +219,50 @@
             color: rgba(219,234,254,0.95);
             font-weight: 500;
         }
+        .keyword-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            background: linear-gradient(180deg, rgba(255,255,255,0.98) 0%, rgba(247,250,255,0.98) 100%);
+            border: 1px solid rgba(3,81,193,0.12);
+            border-radius: 1rem;
+            box-shadow: 0 10px 28px rgba(7,29,73,0.08);
+        }
+        .keyword-chip {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.35rem 0.7rem;
+            border-radius: 999px;
+            line-height: 1;
+            font-family: 'Stratos', 'IBM Plex Sans', sans-serif;
+            font-weight: 400;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            cursor: default;
+        }
+        .keyword-chip:hover {
+            transform: translateY(-2px) scale(1.03);
+            box-shadow: 0 8px 18px rgba(7,29,73,0.12);
+        }
+        .keyword-size-1 { font-size: 0.8rem; }
+        .keyword-size-2 { font-size: 1rem; }
+        .keyword-size-3 { font-size: 1.25rem; }
+        .keyword-size-4 { font-size: 1.7rem; }
+        .keyword-c1 { color: #0351C1; background: rgba(3,81,193,0.08); }
+        .keyword-c2 { color: #7C3AED; background: rgba(124,58,237,0.08); }
+        .keyword-c3 { color: #06B6D4; background: rgba(6,182,212,0.08); }
+        .keyword-c4 { color: #F97316; background: rgba(249,115,22,0.08); }
+        .keyword-c5 { color: #10B981; background: rgba(16,185,129,0.08); }
+        .chart-card {
+            background: #fff;
+            border: 1px solid rgba(3,81,193,0.12);
+            border-radius: 1rem;
+            box-shadow: 0 10px 28px rgba(7,29,73,0.08);
+            padding: 1rem;
+        }
         @media (max-width: 640px) {
             .bubble-map { gap: 0.9rem; }
             .bubble-node--lg, .bubble-node--md, .bubble-node--sm {
@@ -656,13 +700,38 @@
 <p>Можно отметить, что по сравнению с 2024 годом рынок стал более концентрированным: если тогда большинство приложений из топ-10 зарабатывало более $1 млн в месяц, сейчас таковых лишь половина. Примечателен тренд на ключевые слова, связанные с AI: приложения активно добавляют их в названия и описания, чтобы привлечь трафик.</p>
 </div>
 
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4 my-6">
-  <figure>
-    <img src="images/sensortower-ai-keywords-cloud.jpg" alt="Top AI Keywords Used by Nutrition & Diet Apps" class="w-full rounded-xl border border-outline-variant/20 shadow-sm"/>
-  </figure>
-  <figure>
-    <img src="images/sensortower-ai-keywords-chart.jpg" alt="AI Keyword Adoption in Apple Search Ads" class="w-full rounded-xl border border-outline-variant/20 shadow-sm"/>
-  </figure>
+<div class="grid grid-cols-1 xl:grid-cols-2 gap-4 my-6">
+  <div class="chart-card">
+    <h5 class="font-headline text-lg font-bold text-on-background mb-1">Top AI Keywords Used</h5>
+    <p class="text-sm text-on-surface-variant mb-4">by Nutrition & Diet Apps</p>
+    <div class="keyword-cloud" aria-label="Облако AI-ключевых слов">
+      <span class="keyword-chip keyword-size-4 keyword-c3">Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-4 keyword-c4">Ai Food Tracker</span>
+      <span class="keyword-chip keyword-size-3 keyword-c2">Cal Ai</span>
+      <span class="keyword-chip keyword-size-3 keyword-c1">Ai Cal</span>
+      <span class="keyword-chip keyword-size-3 keyword-c5">Ai Food Scanner</span>
+      <span class="keyword-chip keyword-size-3 keyword-c4">Calorie Counter Ai</span>
+      <span class="keyword-chip keyword-size-2 keyword-c5">Ai Calorie Counter</span>
+      <span class="keyword-chip keyword-size-2 keyword-c1">Food Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-2 keyword-c2">Bitepal Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-2 keyword-c3">Ai Food</span>
+      <span class="keyword-chip keyword-size-2 keyword-c4">Diet Ai</span>
+      <span class="keyword-chip keyword-size-2 keyword-c5">Cal Ai Free</span>
+      <span class="keyword-chip keyword-size-2 keyword-c1">Ai Macro Tracker</span>
+      <span class="keyword-chip keyword-size-2 keyword-c3">Ai Meal Scanner</span>
+      <span class="keyword-chip keyword-size-1 keyword-c2">Ai Meal Planner</span>
+      <span class="keyword-chip keyword-size-1 keyword-c5">Call Ai</span>
+      <span class="keyword-chip keyword-size-1 keyword-c4">Cal Bot Ai Calorie Tracker</span>
+      <span class="keyword-chip keyword-size-1 keyword-c1">Cai Ai</span>
+      <span class="keyword-chip keyword-size-1 keyword-c3">Ai Diet Planner</span>
+      <span class="keyword-chip keyword-size-1 keyword-c2">Ai Calorie Tracker Scanner</span>
+    </div>
+  </div>
+  <div class="chart-card">
+    <h5 class="font-headline text-lg font-bold text-on-background mb-1">AI Keyword Adoption in Apple Search Ads</h5>
+    <p class="text-sm text-on-surface-variant mb-4">Average AI Keywords per App — Top 100 Nutrition Apps, United States</p>
+    <div class="h-[320px] md:h-[360px]"><canvas id="aiKeywordAdoptionChart"></canvas></div>
+  </div>
 </div>
 <p class="chart-caption mb-8">Источник: <a href="https://sensortower.com/blog/health-and-fitness-apps-ai" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Sensortower</a></p>
 
@@ -1973,6 +2042,52 @@
 
 <script>
 (function() {
+  var aiKeywordCtx = document.getElementById('aiKeywordAdoptionChart');
+  if (aiKeywordCtx) {
+    new Chart(aiKeywordCtx, {
+      type: 'line',
+      data: {
+        labels: ['Q1 2023','Q2 2023','Q3 2023','Q4 2023','Q1 2024','Q2 2024','Q3 2024','Q4 2024','Q1 2025','Q2 2025','Q3 2025','Q4 2025'],
+        datasets: [{
+          data: [0.6,0.6,0.8,1.0,1.5,3.7,3.4,3.6,5.0,7.1,6.1,7.8],
+          borderColor: '#14c8c4',
+          backgroundColor: 'rgba(20,200,196,0.18)',
+          pointBackgroundColor: '#14c8c4',
+          pointBorderColor: '#ffffff',
+          pointBorderWidth: 2,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          tension: 0.3,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: { mode: 'index', intersect: false },
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(ctx) { return ctx.raw + ' average AI keywords per app'; }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            suggestedMax: 8,
+            ticks: { stepSize: 2 },
+            grid: { color: 'rgba(115,118,133,0.16)' }
+          },
+          x: {
+            grid: { display: false }
+          }
+        }
+      }
+    });
+  }
+
   // Fade-in on scroll
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
