@@ -1775,68 +1775,15 @@
 <p>Однако уже сейчас заметно замедление ниши — об этом косвенно говорят результаты некоторых крупнейших игроков и данные GetCourse — LMS-платформы, которую используют многие небольшие онлайн-школы фитнеса.</p>
 </div>
 
-<!-- GetCourse: visual bar chart -->
+<!-- GetCourse: column chart -->
 <figure class="my-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10">
 <h4 class="font-headline text-base font-bold text-on-background mb-1">Выручка ниши «Фитнес» на GetCourse</h4>
-<p class="text-xs text-on-surface-variant mb-8">Млн рублей. *2025 — предварительная оценка Smart Ranking</p>
-<div class="space-y-5 gc-chart">
-<div class="gc-row opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1.5">
-<span class="text-sm font-medium text-on-background">2023</span>
-<span class="text-sm font-headline font-bold text-on-surface-variant">4 625 млн ₽</span>
-</div>
-<div class="w-full h-10 bg-surface-container rounded-full overflow-hidden">
-<div class="h-full rounded-full bg-gradient-to-r from-primary/50 to-primary/30 transition-all duration-1000 ease-out" style="width:0%" data-width="65%"></div>
-</div>
-</div>
-<div class="gc-row opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1.5">
-<span class="text-sm font-medium text-on-background">2024</span>
-<div class="flex items-center gap-2">
-<span class="text-xs px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">+45%</span>
-<span class="text-sm font-headline font-bold text-on-background">6 687 млн ₽</span>
-</div>
-</div>
-<div class="w-full h-10 bg-surface-container rounded-full overflow-hidden">
-<div class="h-full rounded-full bg-gradient-to-r from-primary/70 to-primary/40 transition-all duration-1000 ease-out" style="width:0%" data-width="94%"></div>
-</div>
-</div>
-<div class="gc-row opacity-0" style="transform:translateX(-20px)">
-<div class="flex items-center justify-between mb-1.5">
-<span class="text-sm font-bold text-on-background">2025*</span>
-<div class="flex items-center gap-2">
-<span class="text-xs px-1.5 py-0.5 rounded bg-tertiary/10 text-tertiary font-semibold">+6%</span>
-<span class="text-sm font-headline font-extrabold text-primary">7 500 млн ₽</span>
-</div>
-</div>
-<div class="w-full h-10 bg-surface-container rounded-full overflow-hidden">
-<div class="h-full rounded-full bg-gradient-to-r from-primary to-primary-container transition-all duration-1000 ease-out" style="width:0%" data-width="100%"></div>
-</div>
-</div>
+<p class="text-xs text-on-surface-variant mb-6">Млн рублей. *2025 — оценка Smart Ranking</p>
+<div class="h-[320px] md:h-[380px]">
+  <canvas id="getcourseRevenueChart"></canvas>
 </div>
 <figcaption class="chart-caption mt-4">Источник: <a href="https://getcourse.ru/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">GetCourse</a>, расчеты Smart Ranking</figcaption>
 </figure>
-<script>
-(function(){
-  const gO = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.querySelectorAll('.gc-row').forEach((row, i) => {
-          setTimeout(() => {
-            row.style.transition = 'opacity 0.5s ease-out, transform 0.5s ease-out';
-            row.style.opacity = '1';
-            row.style.transform = 'translateX(0)';
-            const fill = row.querySelector('[data-width]');
-            if (fill) setTimeout(() => { fill.style.width = fill.dataset.width; }, 200);
-          }, i * 200);
-        });
-        gO.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-  document.querySelectorAll('.gc-chart').forEach(el => gO.observe(el));
-})();
-</script>
 
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
 <p>По оценке Smart Ranking, в 2025 году объем рынка онлайн-фитнеса превысил <strong class="stat-highlight">10,7 млрд рублей</strong>. Оценка построена как сумма расчетного оборота фитнес-школ на GetCourse и выручки крупных игроков, работающих вне платформы. Консервативная оценка рынка составляет около 9 млрд рублей.</p>
@@ -2026,6 +1973,46 @@
 
 <script>
 (function() {
+  var getcourseRevenueCtx = document.getElementById('getcourseRevenueChart');
+  if (getcourseRevenueCtx) {
+    new Chart(getcourseRevenueCtx, {
+      type: 'bar',
+      data: {
+        labels: ['2023', '2024', '2025*'],
+        datasets: [{
+          data: [4625, 6687, 7500],
+          backgroundColor: ['rgba(184,204,234,0.95)', 'rgba(3,81,193,0.75)', 'rgba(3,81,193,1)'],
+          borderColor: ['#B8CCEA', '#0351C1', '#0351C1'],
+          borderWidth: 1,
+          borderRadius: 10,
+          maxBarThickness: 84
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(ctx) { return ctx.raw.toLocaleString('ru-RU') + ' млн ₽'; }
+            }
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true,
+            ticks: {
+              callback: function(value) { return value.toLocaleString('ru-RU'); }
+            },
+            grid: { color: 'rgba(115,118,133,0.16)' }
+          },
+          x: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
   var aiKeywordCtx = document.getElementById('aiKeywordAdoptionChart');
   if (aiKeywordCtx) {
     new Chart(aiKeywordCtx, {
