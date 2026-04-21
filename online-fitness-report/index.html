@@ -554,6 +554,14 @@
 <div class="prose max-w-none text-on-surface-variant leading-relaxed space-y-4">
 <h4 class="font-headline text-lg font-bold text-on-background !mb-4">Удержание пользователей</h4>
 <p>По данным <a href="https://growth-onomics.com/mobile-app-retention-benchmarks-by-industry-2026/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Growth-Onomics</a>, средний уровень удержания пользователей (т.е. доля пользователей, которые оставались в приложении спустя определенный период времени) в приложениях категории Health&amp;Fitness составляет <strong class="stat-highlight">3,7%</strong> на 30 день — эта цифра не изменилась с 2024 года.</p>
+<figure class="my-6 bg-surface-container-lowest p-5 md:p-6 rounded-xl border border-outline-variant/10">
+  <h4 class="font-headline text-base font-bold text-on-background mb-1">Удержание мобильных приложений по категориям на 30-й день</h4>
+  <p class="text-xs text-on-surface-variant mb-4">Ниша Health &amp; Fitness подсвечена отдельно</p>
+  <div class="h-[420px] md:h-[520px]">
+    <canvas id="retentionIndustryChart"></canvas>
+  </div>
+  <figcaption class="chart-caption mt-4">Источник: <a href="https://growth-onomics.com/mobile-app-retention-benchmarks-by-industry-2026/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Growth-Onomics</a></figcaption>
+</figure>
 </div>
 </section>
 
@@ -1988,6 +1996,45 @@
 
 <script>
 (function() {
+  var retentionIndustryCtx = document.getElementById('retentionIndustryChart');
+  if (retentionIndustryCtx) {
+    new Chart(retentionIndustryCtx, {
+      type: 'bar',
+      data: {
+        labels: ['News','Business','Shopping','Finance','Food & Drink','Health & Fitness','Productivity','Entertainment','Travel','Social','Utilities','Gaming','Education'],
+        datasets: [{
+          data: [11.3,5.1,5.0,4.6,3.7,3.7,3.2,3.0,3.0,2.8,2.6,2.4,2.1],
+          backgroundColor: ['#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#0351C1','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA'],
+          borderColor: ['#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#0351C1','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA','#B8CCEA'],
+          borderWidth: 1,
+          borderRadius: 8,
+          maxBarThickness: 28
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: function(ctx) { return ctx.raw + '%'; }
+            }
+          }
+        },
+        scales: {
+          x: {
+            beginAtZero: true,
+            ticks: { callback: function(value){ return value + '%'; } },
+            grid: { color: 'rgba(115,118,133,0.16)' }
+          },
+          y: { grid: { display: false } }
+        }
+      }
+    });
+  }
+
   var getcourseRevenueCtx = document.getElementById('getcourseRevenueChart');
   if (getcourseRevenueCtx) {
     new Chart(getcourseRevenueCtx, {
