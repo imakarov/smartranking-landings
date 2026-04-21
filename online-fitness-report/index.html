@@ -431,7 +431,7 @@
 <div class="summary-stat opacity-0">
 <div class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-none mb-1">$27</div>
 <div class="text-lg md:text-xl text-blue-300 font-semibold mb-1">млрд</div>
-<div class="text-xs text-blue-200/60">Объём рынка в 2025</div>
+<div class="text-xs text-blue-200/60">Объем рынка в 2025</div>
 </div>
 <div class="summary-stat opacity-0">
 <div class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-none mb-1">32%</div>
@@ -462,7 +462,7 @@
 
 <!-- Chart: Online Fitness Market Value 2020–2035 (Chart.js) -->
 <figure class="my-8 bg-surface-container-lowest p-6 md:p-8 rounded-xl border border-outline-variant/10">
-<h4 class="font-headline text-base font-bold text-on-background mb-1">Online Fitness Market — прогноз объёма рынка</h4>
+<h4 class="font-headline text-base font-bold text-on-background mb-1">Online Fitness Market — прогноз объема рынка</h4>
 <p class="text-xs text-on-surface-variant mb-6">USD Billion, 2020–2035. CAGR 32%</p>
 <div style="position:relative;width:100%;max-width:100%;">
 <canvas id="fmiChart"></canvas>
@@ -478,7 +478,7 @@
   new Chart(document.getElementById('fmiChart'),{
     type:'bar',
     data:{ labels: labels, datasets:[
-      { label:'Объём рынка, $ млрд', data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false, order: 2, yAxisID: 'y' },
+      { label:'Объем рынка, $ млрд', data: values, backgroundColor: colors, borderRadius: 4, borderSkipped: false, order: 2, yAxisID: 'y' },
       { label:'Y-o-Y рост, %', data: growth, type:'line', borderColor:'#071D49', backgroundColor:'transparent', borderWidth: 2, tension: 0.3, pointRadius: 3, pointBackgroundColor:'#071D49', pointBorderColor:'#fff', pointBorderWidth: 1.5, order: 1, yAxisID: 'y1' }
     ]},
     options:{ responsive: true, maintainAspectRatio: true, aspectRatio: 2, interaction:{ mode:'index', intersect: false }, plugins:{ legend:{ display:true, position:'bottom', labels:{ font:{ family:'IBM Plex Sans', size:12 }, padding:16, usePointStyle:false, boxWidth:14, boxHeight:14 }}, tooltip:{ backgroundColor:'rgba(19,27,46,0.95)', titleFont:{ family:'IBM Plex Sans', size:13, weight:'600' }, bodyFont:{ family:'IBM Plex Sans', size:12 }, padding:12, cornerRadius:8, callbacks:{ label: function(item){ if(item.datasetIndex===0) return '$'+item.parsed.y+' млрд'; if(item.parsed.y!==null) return item.parsed.y.toFixed(1)+'% рост'; return null; } } } }, scales:{ x:{ grid:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685' }}, y:{ position:'left', grid:{ color:'rgba(195,198,214,0.2)' }, border:{ display:false }, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#737685', callback: function(v){ return '$'+v; } }, beginAtZero: true }, y1:{ position:'right', grid:{ drawOnChartArea:false }, border:{ display:false }, min: 25, max: 40, ticks:{ font:{ family:'IBM Plex Sans', size:11 }, color:'#071D49', callback: function(v){ return v+'%'; } } } } }
@@ -894,7 +894,7 @@
 <div class="summary-stat opacity-0">
 <div class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-none mb-1">10,7</div>
 <div class="text-lg md:text-xl text-blue-300 font-semibold mb-1">млрд ₽</div>
-<div class="text-xs text-blue-200/60">Объём рынка в 2025</div>
+<div class="text-xs text-blue-200/60">Объем рынка в 2025</div>
 </div>
 <div class="summary-stat opacity-0">
 <div class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter text-white leading-none mb-1">5,7</div>
@@ -1567,14 +1567,14 @@
 <div class="plaque-card-top"><span class="material-symbols-outlined">memory</span></div>
 <div class="plaque-card-body">
 <p class="plaque-card-title">Технологическое отставание</p>
-<p class="plaque-card-subtitle">ИИ-коучинг остаётся нишевым</p>
+<p class="plaque-card-subtitle">ИИ-коучинг остается нишевым</p>
 </div>
 </div>
 <div class="summary-stat opacity-0 plaque-card">
 <div class="plaque-card-top"><span class="material-symbols-outlined">person_off</span></div>
 <div class="plaque-card-body">
 <p class="plaque-card-title">Удержание</p>
-<p class="plaque-card-subtitle">CAC растёт, площадки нестабильны</p>
+<p class="plaque-card-subtitle">CAC растет, площадки нестабильны</p>
 </div>
 </div>
 <div class="summary-stat opacity-0 plaque-card">
@@ -1810,7 +1810,7 @@
 </div>
 </div>
 </div>
-<figcaption class="chart-caption mt-4">Источник: <a href="https://getcourse.ru/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">GetCourse</a>, расчёты Smart Ranking</figcaption>
+<figcaption class="chart-caption mt-4">Источник: <a href="https://getcourse.ru/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">GetCourse</a>, расчеты Smart Ranking</figcaption>
 </figure>
 <script>
 (function(){
