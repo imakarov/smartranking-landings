@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru"><head>
+<meta charset="utf-8"/>
+<meta name="robots" content="noindex, nofollow"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+<link rel="shortcut icon" href="favicon.ico"/>
+<title>Исследование для Т-Банка — Smart Ranking</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script>
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-primary": "#ffffff","secondary-container": "#d5e3fc","surface-tint": "#0c56d0","on-tertiary-fixed-variant": "#005137","tertiary-container": "#006847","secondary-fixed": "#d5e3fc","secondary": "#515f74","surface-container-lowest": "#ffffff","on-tertiary-container": "#75e8b5","on-secondary-fixed": "#0d1c2e","background": "#faf8ff","on-surface-variant": "#434654","inverse-on-surface": "#eef0ff","tertiary-fixed-dim": "#68dba9","primary-fixed-dim": "#b2c5ff","on-error-container": "#93000a","surface-container-high": "#e2e7ff","surface-container": "#eaedff","primary-container": "#0052cc","on-tertiary-fixed": "#002114","surface-dim": "#d2d9f4","surface-container-highest": "#dae2fd","inverse-primary": "#b2c5ff","on-tertiary": "#ffffff","tertiary-fixed": "#85f8c4","primary": "#003d9b","inverse-surface": "#283044","outline": "#737685","outline-variant": "#c3c6d6","error": "#ba1a1a","tertiary": "#004e34","surface-bright": "#faf8ff","surface-variant": "#dae2fd","secondary-fixed-dim": "#b9c7df","on-primary-fixed": "#001848","on-background": "#131b2e","on-primary-fixed-variant": "#0040a2","on-error": "#ffffff","surface-container-low": "#f2f3ff","primary-fixed": "#dae2ff","on-secondary-container": "#57657a","on-primary-container": "#c4d2ff","on-secondary": "#ffffff","surface": "#faf8ff","on-secondary-fixed-variant": "#3a485b","on-surface": "#131b2e","error-container": "#ffdad6"
+        },
+        borderRadius: { DEFAULT: "0.125rem", lg: "0.25rem", xl: "0.5rem", full: "0.75rem" },
+        fontFamily: { headline: ["Manrope"], body: ["Inter"], label: ["Inter"] }
+      }
+    }
+  }
+</script>
+<style>
+.material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24}
+</style>
+<script type="text/javascript">
+(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+ym(84884446, "init", {clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/84884446" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen max-w-[960px] mx-auto">
+
+<header class="w-full top-0 sticky bg-white border-none z-50">
+  <nav class="flex justify-between items-center px-4 md:px-8 py-2 min-h-[64px] gap-2">
+    <div class="flex items-center shrink-0"><img alt="Smart Ranking Logo" class="h-7 md:h-8 w-auto object-contain" src="logo.svg"/></div>
+    <div class="flex-1 text-center"><span class="text-[10px] md:text-sm font-label font-bold text-primary tracking-[0.1em] md:tracking-[0.15em] uppercase">КОММЕРЧЕСКОЕ ПРЕДЛОЖЕНИЕ</span></div>
+    <div class="flex justify-end shrink-0"><span class="font-headline font-semibold text-on-background text-sm md:text-lg whitespace-nowrap">Smart Ranking</span></div>
+  </nav>
+</header>
+
+<main class="flex-grow">
+
+<!-- Hero -->
+<section class="relative overflow-hidden pt-12 pb-16 px-6">
+  <div class="absolute inset-0 -z-10 bg-[radial-gradient(45%_45%_at_50%_50%,#F2F3FF_0%,#FAF8FF_100%)]"></div>
+  <div class="mx-auto space-y-5">
+    <div class="inline-flex w-fit items-center gap-2 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold uppercase tracking-wider">
+      <span class="material-symbols-outlined text-[14px]" style="font-variation-settings: 'FILL' 1;">science</span>
+      Независимое исследование
+    </div>
+    <h1 class="text-4xl md:text-5xl font-headline font-extrabold text-on-background tracking-tighter leading-[1.1]">
+      Как малый и средний бизнес<br/>
+      <span class="text-primary">использует ИИ — и что им мешает</span>
+    </h1>
+    <p class="text-lg text-on-surface-variant max-w-3xl leading-relaxed">
+      Отраслевое исследование барьеров и точек роста внедрения ИИ-решений в сегменте МСБ: первичные данные, глубинные интервью, количественная выборка по ключевым отраслям
+    </p>
+    <div class="grid md:grid-cols-3 gap-4 mt-6">
+      <div class="bg-white rounded-xl shadow-sm border border-outline-variant/20 p-5">
+        <div class="text-sm uppercase tracking-widest text-outline mb-2">Старт</div>
+        <div class="font-headline text-xl font-extrabold">Июнь 2026</div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-outline-variant/20 p-5">
+        <div class="text-sm uppercase tracking-widest text-outline mb-2">Формат</div>
+        <div class="font-headline text-xl font-extrabold">Три сценария</div>
+      </div>
+      <div class="bg-white rounded-xl shadow-sm border border-outline-variant/20 p-5">
+        <div class="text-sm uppercase tracking-widest text-outline mb-2">Итог</div>
+        <div class="font-headline text-xl font-extrabold">Публичный отчёт + данные</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Research questions / hypotheses -->
+<section class="py-12 md:py-16 px-4 md:px-8">
+  <div class="text-center mb-12">
+    <h2 class="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">Исследовательские вопросы</h2>
+    <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-on-background tracking-tighter">Что исследование должно доказать</h3>
+    <p class="text-on-surface-variant mt-3 max-w-2xl mx-auto">Четыре гипотезы, которые сейчас существуют на уровне ощущений рынка — исследование переводит их в доказанные факты с данными.</p>
+  </div>
+  <div class="space-y-4">
+
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-6">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-headline font-extrabold text-sm">1</div>
+      <div class="flex-1">
+        <h4 class="font-headline font-bold text-on-background text-lg mb-2">МСБ хочет ИИ, но не может его внедрить</h4>
+        <p class="text-on-surface-variant leading-relaxed text-sm mb-3">Средний бизнес заинтересован в автоматизации процессов с помощью ИИ, но барьер входа слишком высок: интеграция сложна технически, дорога и требует ML-экспертизы, которой у МСБ нет внутри.</p>
+        <div class="inline-flex items-center gap-2 text-xs text-outline bg-surface-container-low px-3 py-1.5 rounded-full">
+          <span class="material-symbols-outlined text-[14px]">help</span>
+          Гипотеза: спрос есть, барьер — не желание, а возможность
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-6">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-headline font-extrabold text-sm">2</div>
+      <div class="flex-1">
+        <h4 class="font-headline font-bold text-on-background text-lg mb-2">Интеграторы работают с крупным бизнесом — не с МСБ</h4>
+        <p class="text-on-surface-variant leading-relaxed text-sm mb-3">Существующие интеграторы из отраслевых рейтингов ориентированы на Enterprise: их экономика не сходится на проектах МСБ. Адаптированных под малый бюджет решений на рынке практически нет.</p>
+        <div class="inline-flex items-center gap-2 text-xs text-outline bg-surface-container-low px-3 py-1.5 rounded-full">
+          <span class="material-symbols-outlined text-[14px]">help</span>
+          Гипотеза: предложение не совпадает со спросом МСБ по цене и формату
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-6">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-headline font-extrabold text-sm">3</div>
+      <div class="flex-1">
+        <h4 class="font-headline font-bold text-on-background text-lg mb-2">Рынок ИИ-интеграции для МСБ фрагментирован и мал</h4>
+        <p class="text-on-surface-variant leading-relaxed text-sm mb-3">Независимые интеграторы, которые могли бы работать с МСБ, не появляются — не потому что некому, а потому что нет ёмкости рынка. МСБ не платит за интеграцию, интеграторы не могут на нём зарабатывать: замкнутый круг.</p>
+        <div class="inline-flex items-center gap-2 text-xs text-outline bg-surface-container-low px-3 py-1.5 rounded-full">
+          <span class="material-symbols-outlined text-[14px]">help</span>
+          Гипотеза: проблема структурная, не случайная
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-6">
+      <div class="shrink-0 w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-headline font-extrabold text-sm">4</div>
+      <div class="flex-1">
+        <h4 class="font-headline font-bold text-on-background text-lg mb-2">Спрос на ИИ неравномерен по отраслям — есть явные лидеры</h4>
+        <p class="text-on-surface-variant leading-relaxed text-sm mb-3">В отраслях с повторяющимися процессами и цифровыми данными (e-commerce, логистика, услуги, ретейл) ИИ приживается быстрее. Понять, какие именно отрасли созрели — значит знать, куда идти с продуктом первым.</p>
+        <div class="inline-flex items-center gap-2 text-xs text-outline bg-surface-container-low px-3 py-1.5 rounded-full">
+          <span class="material-symbols-outlined text-[14px]">help</span>
+          Гипотеза: не все отрасли МСБ одинаково готовы — нужна карта
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Scenarios — sequential blocks -->
+<section class="py-12 md:py-16 px-4 md:px-8">
+  <div class="text-center mb-14">
+    <h2 class="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">Сценарии</h2>
+    <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-on-background tracking-tighter">Три варианта исследования</h3>
+    <p class="text-on-surface-variant mt-3 max-w-xl mx-auto">Каждый следующий сценарий включает всё из предыдущего — и добавляет новый уровень глубины данных.</p>
+  </div>
+
+  <!-- Scenario 1: Basic -->
+  <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-sm overflow-hidden mb-6">
+    <div class="grid lg:grid-cols-12">
+      <div class="lg:col-span-4 bg-surface-container-low p-8 flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full bg-white text-on-surface-variant text-xs uppercase tracking-widest font-semibold mb-4">Сценарий 1</span>
+          <h4 class="text-2xl font-headline font-extrabold text-on-background mb-2">Базовый</h4>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Кабинетный анализ рынка по открытым источникам. Подходит для первичного понимания ландшафта без полевой работы.</p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-outline-variant/20">
+          <div class="text-xs uppercase tracking-widest text-outline mb-1">Стоимость</div>
+          <div class="text-3xl font-headline font-extrabold text-on-background">1,8 млн ₽</div>
+          <div class="text-sm text-on-surface-variant mt-1">Срок: 2 месяца</div>
+        </div>
+      </div>
+      <div class="lg:col-span-8 p-8">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-outline mb-3">Что входит</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">check_circle</span>Обзор российских LLM-решений и их применимость для МСБ</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">check_circle</span>Карта ключевых независимых интеграторов на рынке</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">check_circle</span>Анализ 30+ компаний МСБ по открытым данным</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">check_circle</span>Отраслевой срез по 5–7 ключевым секторам</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">check_circle</span>Предварительные выводы по рыночным нишам</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-outline mt-0.5">check_circle</span>Итоговый аналитический отчёт с презентацией</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-error/60 mb-3">Чего нет</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-error/50 mt-0.5">cancel</span>Первичных интервью с МСБ или интеграторами</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-error/50 mt-0.5">cancel</span>Количественного опроса — нет статистики в процентах</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-error/50 mt-0.5">cancel</span>Выявленных «незакрытых потребностей» рынка</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-error/50 mt-0.5">cancel</span>Полноценного PR-материала для деловых СМИ</li>
+            </ul>
+            <div class="mt-5 bg-amber-50 border border-amber-200 rounded-xl p-4 text-xs text-amber-800 leading-relaxed">
+              <strong>Ограничение:</strong> без первичных данных СМИ не публикуют материал как собственное исследование — только как аналитический обзор.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario 2: Standard — recommended -->
+  <div class="bg-white rounded-2xl border-2 border-primary shadow-xl overflow-hidden mb-6 relative">
+      <div class="grid lg:grid-cols-12">
+      <div class="lg:col-span-4 bg-primary p-8 flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-xs uppercase tracking-widest font-semibold mb-4">Сценарий 2</span>
+          <h4 class="text-2xl font-headline font-extrabold text-white mb-2">Основной</h4>
+          <p class="text-white/80 text-sm leading-relaxed">Кабинетный анализ + первичные интервью с МСБ и интеграторами. Минимально достаточный формат для PR в деловых СМИ.</p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/20">
+          <div class="text-xs uppercase tracking-widest text-white/60 mb-1">Стоимость</div>
+          <div class="text-3xl font-headline font-extrabold text-white">3,8 млн ₽</div>
+          <div class="text-sm text-white/70 mt-1">Срок: 3 месяца</div>
+        </div>
+      </div>
+      <div class="lg:col-span-8 p-8">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-outline mb-3">Всё из Базового, плюс</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">check_circle</span>10 глубинных интервью с представителями МСБ</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">check_circle</span>5 интервью с независимыми интеграторами ИИ</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">check_circle</span>Выявление неудовлетворённых потребностей рынка</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">check_circle</span>Анализ барьеров внедрения по отраслям</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">check_circle</span>Отраслевая карта: лидеры и отстающие сегменты</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">check_circle</span>Формулировка рыночных gap'ов и окон возможностей</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-primary mb-3">Что это даёт</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">star</span>Цитаты от реальных МСБ — публикации в РБК, Forbes</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">star</span>Пресс-кит: пресс-релиз + данные для редакций</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">star</span>Основа для стратегических решений по продукту</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-primary mt-0.5">star</span>Готов к публичному анонсу к ноябрю 2026</li>
+            </ul>
+            <div class="mt-5 bg-primary/5 border border-primary/20 rounded-xl p-4 text-xs text-primary leading-relaxed">
+              <strong>Это минимальный уровень для PR-цели.</strong> Первичные данные — то, что делает материал ньюсмейкерским, а не обзорным.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scenario 3: Strategic -->
+  <div class="bg-white rounded-2xl border border-outline-variant/20 shadow-sm overflow-hidden mb-6">
+    <div class="grid lg:grid-cols-12">
+      <div class="lg:col-span-4 bg-on-background p-8 flex flex-col justify-between">
+        <div>
+          <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-white/80 text-xs uppercase tracking-widest font-semibold mb-4">Сценарий 3</span>
+          <h4 class="text-2xl font-headline font-extrabold text-white mb-2">Стратегический</h4>
+          <p class="text-white/70 text-sm leading-relaxed">Pre-product discovery: не просто описать рынок, а подготовить основу для запуска продукта или партнёрской модели.</p>
+        </div>
+        <div class="mt-8 pt-6 border-t border-white/10">
+          <div class="text-xs uppercase tracking-widest text-white/40 mb-1">Стоимость</div>
+          <div class="text-3xl font-headline font-extrabold text-white">5,6 млн ₽</div>
+          <div class="text-sm text-white/60 mt-1">Срок: 4 месяца</div>
+        </div>
+      </div>
+      <div class="lg:col-span-8 p-8">
+        <div class="grid md:grid-cols-2 gap-5">
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-outline mb-3">Всё из Основного, плюс</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">check_circle</span>Количественный опрос 80–100 компаний МСБ</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">check_circle</span>Расширенная сегментация МСБ по профилю использования ИИ</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">check_circle</span>Оценка востребованных типов решений на базе LLM</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">check_circle</span>Формирование продуктовых гипотез</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">check_circle</span>Рекомендации по позиционированию и точкам входа</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">check_circle</span>Финальная защита перед командой заказчика</li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-tertiary mb-3">Что это даёт</p>
+            <ul class="space-y-3 text-sm text-on-surface-variant">
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">star</span>Статистика в процентах: «67% МСБ сталкиваются с…»</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">star</span>Цитируемость в Коммерсантъ, Forbes на уровне данных</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">star</span>Roadmap для запуска продуктового направления</li>
+              <li class="flex items-start gap-2"><span class="material-symbols-outlined text-[16px] text-tertiary mt-0.5">star</span>Снижает риск потратить 50 млн на не тот рынок</li>
+            </ul>
+            <div class="mt-5 bg-tertiary/5 border border-tertiary/20 rounded-xl p-4 text-xs text-tertiary leading-relaxed">
+              <strong>Для тех, кто принимает решение о запуске.</strong> Не исследование — инвестиция в снижение риска продуктовой ошибки.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Value summary columns -->
+<section class="py-10 md:py-14 px-4 md:px-8 bg-surface-container-low">
+  <div class="text-center mb-10">
+    <h2 class="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">Ключевая ценность</h2>
+    <h3 class="text-2xl font-headline font-extrabold text-on-background tracking-tighter">Что даёт каждый сценарий</h3>
+  </div>
+  <div class="grid md:grid-cols-3 gap-6">
+    <!-- Basic value -->
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6">
+      <div class="text-xs uppercase tracking-widest text-outline mb-3 font-bold">Базовый · 1,8 млн ₽</div>
+      <p class="text-base font-headline font-bold text-on-background mb-4">Понять рынок — для себя</p>
+      <p class="text-sm text-on-surface-variant leading-relaxed">Структурированная картина ИИ-рынка для МСБ без полевой работы. Даёт ориентир, но не первичные данные для внешней коммуникации.</p>
+      <div class="mt-5 text-xs text-on-surface-variant/70 italic">Подходит: если нужен быстрый обзор перед стратегической сессией</div>
+    </div>
+    <!-- Standard value -->
+    <div class="bg-white rounded-xl border-2 border-primary p-6">
+      <div class="text-xs uppercase tracking-widest text-primary mb-3 font-bold">Основной · 3,8 млн ₽</div>
+      <p class="text-base font-headline font-bold text-on-background mb-4">PR-присутствие с реальными данными</p>
+      <p class="text-sm text-on-surface-variant leading-relaxed">Живые голоса МСБ и интеграторов → цитаты, инсайты, кейсы. Всё для публикации в деловых изданиях и конференционного выступления.</p>
+      <div class="mt-5 text-xs text-primary/70 italic font-semibold">Минимум для полноценного PR-результата</div>
+    </div>
+    <!-- Strategic value -->
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6">
+      <div class="text-xs uppercase tracking-widest text-tertiary mb-3 font-bold">Стратегический · 5,6 млн ₽</div>
+      <p class="text-base font-headline font-bold text-on-background mb-4">Основа для запуска продукта</p>
+      <p class="text-sm text-on-surface-variant leading-relaxed">Статистика, сегментация, гипотезы, roadmap. Отвечает не только «что происходит на рынке», но и «куда входить и с чем».</p>
+      <div class="mt-5 text-xs text-on-surface-variant/70 italic">Подходит: если решение о запуске принимается по итогам исследования</div>
+    </div>
+  </div>
+</section>
+
+<!-- What you get -->
+<section class="py-12 md:py-16 px-4 md:px-8">
+  <div class="text-center mb-12">
+    <h2 class="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">Результат</h2>
+    <h3 class="text-2xl md:text-3xl font-headline font-extrabold text-on-background tracking-tighter">Что входит в исследование</h3>
+  </div>
+  <div class="grid md:grid-cols-2 gap-5">
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-5">
+      <div class="w-10 h-10 shrink-0 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-[20px]">description</span>
+      </div>
+      <div>
+        <h5 class="font-headline font-bold mb-1">Аналитический отчёт</h5>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Полный текстовый отчёт с методологией, ключевыми выводами и рекомендациями. Готов к публикации и распространению.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-5">
+      <div class="w-10 h-10 shrink-0 rounded-md bg-primary/10 flex items-center justify-center text-primary">
+        <span class="material-symbols-outlined text-[20px]">pie_chart</span>
+      </div>
+      <div>
+        <h5 class="font-headline font-bold mb-1">Визуализации и инфографика</h5>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Графики, диаграммы и отраслевые карты — готовые к использованию в презентациях и публикациях.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-5">
+      <div class="w-10 h-10 shrink-0 rounded-md bg-tertiary/10 flex items-center justify-center text-tertiary">
+        <span class="material-symbols-outlined text-[20px]">newspaper</span>
+      </div>
+      <div>
+        <h5 class="font-headline font-bold mb-1">Пресс-кит для СМИ</h5>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Пресс-релиз с ключевыми данными и цитатами, адаптированный под деловые и отраслевые издания.</p>
+      </div>
+    </div>
+    <div class="bg-white rounded-xl border border-outline-variant/20 p-6 flex gap-5">
+      <div class="w-10 h-10 shrink-0 rounded-md bg-tertiary/10 flex items-center justify-center text-tertiary">
+        <span class="material-symbols-outlined text-[20px]">dataset</span>
+      </div>
+      <div>
+        <h5 class="font-headline font-bold mb-1">Доступ к массиву данных</h5>
+        <p class="text-sm text-on-surface-variant leading-relaxed">Структурированный набор данных из интервью и опросов — для внутреннего использования и продуктовых гипотез.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Timeline -->
+<section class="py-10 md:py-14 px-4 md:px-8 bg-surface-container-low">
+  <div class="text-center mb-10">
+    <h2 class="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">Сроки</h2>
+    <h3 class="text-2xl font-headline font-extrabold text-on-background tracking-tighter">Как устроена работа</h3>
+  </div>
+  <div class="max-w-2xl mx-auto">
+    <div class="space-y-4">
+      <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 shrink-0 rounded-full bg-primary text-white flex items-center justify-center font-headline font-bold text-sm">1</div>
+        <div class="flex-1 bg-white rounded-xl p-4 border border-outline-variant/20">
+          <div class="text-xs uppercase tracking-widest text-outline mb-1">Июнь 2026</div>
+          <div class="font-headline font-bold">Согласование программы и старт</div>
+          <div class="text-sm text-on-surface-variant mt-1">Финализация методологии, целевых отраслей и фокуса исследования</div>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 shrink-0 rounded-full bg-primary/70 text-white flex items-center justify-center font-headline font-bold text-sm">2</div>
+        <div class="flex-1 bg-white rounded-xl p-4 border border-outline-variant/20">
+          <div class="text-xs uppercase tracking-widest text-outline mb-1">Июль — август 2026</div>
+          <div class="font-headline font-bold">Полевой этап</div>
+          <div class="text-sm text-on-surface-variant mt-1">Интервью, опросы, кабинетный анализ — в зависимости от выбранного сценария</div>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 shrink-0 rounded-full bg-primary/40 text-white flex items-center justify-center font-headline font-bold text-sm">3</div>
+        <div class="flex-1 bg-white rounded-xl p-4 border border-outline-variant/20">
+          <div class="text-xs uppercase tracking-widest text-outline mb-1">Сентябрь 2026</div>
+          <div class="font-headline font-bold">Анализ и отчёт</div>
+          <div class="text-sm text-on-surface-variant mt-1">Обработка данных, написание отчёта, подготовка визуализаций</div>
+        </div>
+      </div>
+      <div class="flex gap-4 items-start">
+        <div class="w-10 h-10 shrink-0 rounded-full bg-surface-container-high text-primary flex items-center justify-center font-headline font-bold text-sm border-2 border-primary">4</div>
+        <div class="flex-1 bg-white rounded-xl p-4 border-2 border-primary/30">
+          <div class="text-xs uppercase tracking-widest text-primary mb-1">Октябрь 2026</div>
+          <div class="font-headline font-bold text-primary">Публикация результатов</div>
+          <div class="text-sm text-on-surface-variant mt-1">Передача отчёта, пресс-кита и массива данных. Публичный анонс в медиа.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Smart Ranking -->
+<section class="py-12 md:py-16 px-4 md:px-8">
+  <div class="grid lg:grid-cols-2 gap-10 items-center">
+    <div>
+      <h2 class="text-sm font-label font-bold text-primary uppercase tracking-[0.2em] mb-4">Об исполнителе</h2>
+      <h3 class="text-2xl font-headline font-bold text-on-background mb-5 tracking-tight leading-tight">Smart Ranking — независимая аналитическая платформа</h3>
+      <p class="text-on-surface-variant leading-relaxed mb-4">
+        Smart Ranking проводит отраслевые исследования и рейтинги российского технологического рынка. Основная аудитория — EdTech, HRTech, FinTech, B2B SaaS компании.
+      </p>
+      <p class="text-on-surface-variant leading-relaxed">
+        Данные Smart Ranking цитируются в РБК, Forbes, Коммерсантъ и других деловых изданиях. Независимость — основа доверия к нашим исследованиям.
+      </p>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-surface-container-low rounded-xl p-5 text-center">
+        <div class="text-3xl font-headline font-extrabold text-primary mb-1">5+</div>
+        <div class="text-sm text-on-surface-variant">лет на рынке отраслевой аналитики</div>
+      </div>
+      <div class="bg-surface-container-low rounded-xl p-5 text-center">
+        <div class="text-3xl font-headline font-extrabold text-primary mb-1">40+</div>
+        <div class="text-sm text-on-surface-variant">завершённых исследований и рейтингов</div>
+      </div>
+      <div class="bg-surface-container-low rounded-xl p-5 text-center">
+        <div class="text-3xl font-headline font-extrabold text-primary mb-1">500+</div>
+        <div class="text-sm text-on-surface-variant">компаний участвовали в исследованиях</div>
+      </div>
+      <div class="bg-surface-container-low rounded-xl p-5 text-center">
+        <div class="text-3xl font-headline font-extrabold text-primary mb-1">15+</div>
+        <div class="text-sm text-on-surface-variant">публикаций в федеральных СМИ</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-12 md:py-16 px-4 md:px-8 bg-primary text-on-primary">
+  <div class="max-w-2xl mx-auto text-center space-y-6">
+    <h2 class="text-3xl md:text-4xl font-headline font-extrabold tracking-tighter leading-tight">
+      Обсудим детали исследования
+    </h2>
+    <p class="text-on-primary/80 text-lg leading-relaxed">
+      Готовы рассказать подробнее о методологии, обсудить фокус исследования и ответить на вопросы по каждому сценарию.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center mt-4">
+      <a href="https://t.me/daria_smartranking" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary font-headline font-bold px-8 py-4 rounded-xl hover:bg-primary-fixed transition-colors">
+        <span class="material-symbols-outlined text-[20px]">send</span>
+        Написать в Telegram
+      </a>
+    </div>
+    <p class="text-on-primary/60 text-sm mt-2">Дарья Рыжкова, Smart Ranking</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="border-t border-outline-variant/20 px-4 md:px-8 py-8">
+  <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+    <div class="flex items-center gap-3">
+      <img alt="Smart Ranking" class="h-6 w-auto" src="logo.svg"/>
+      <span class="text-sm text-on-surface-variant">© 2026 Smart Ranking</span>
+    </div>
+    <div class="text-sm text-on-surface-variant">
+      Документ конфиденциален и предназначен для адресата
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
